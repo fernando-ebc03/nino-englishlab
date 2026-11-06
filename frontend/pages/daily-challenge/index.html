@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Complete your daily English challenge on EnglishLab.">
+    <title>DAILY CHALLENGE — EnglishLab</title>
+    <link rel="stylesheet" href="/frontend/css/style.css">
+    <link rel="stylesheet" href="/frontend/css/daily-challenge.css">
+</head>
+
+<body>
+
+    <div class="ambient-grid"></div>
+    <div class="ambient-glow"></div>
+    <div class="scanlines"></div>
+
+    <header class="site-header">
+        <a href="/frontend/pages/home/index.html" class="brand">
+            <span class="brand-small">NINO'S</span>
+            <span class="brand-main">NO EXCUSES.</span>
+        </a>
+
+        <nav class="main-nav">
+            <a href="/frontend/pages/home/index.html">
+                <span>01</span> HOME
+            </a>
+            <a href="/frontend/pages/practice/index.html">
+                <span>02</span> PRACTICE
+            </a>
+            <a href="/frontend/pages/progress/index.html">
+                <span>03</span> PROGRESS
+            </a>
+            <a href="/frontend/pages/settings/index.html"
+               class="settings"
+               aria-label="Settings">⚙</a>
+        </nav>
+
+        <div class="header-account">
+            <div class="player-status">
+                <span class="status-dot"></span>
+                <span class="player-name">PLAYER</span>
+            </div>
+
+            <a href="/frontend/pages/login/index.html"
+            class="login-link">
+                <span class="login-icon">↗</span>
+                LOG IN
+            </a>
+        </div>
+    </header>
+
+    <main class="daily-page">
+
+        <section class="daily-heading">
+            <div class="daily-heading-copy">
+                <span class="eyebrow">
+                    <span class="eyebrow-line"></span>
+                    DAILY QUEST
+                </span>
+                <h1>
+                    DOUBLE<br>
+                    <span>TROUBLE.</span>
+                </h1>
+                <p>
+                    One challenge. Two sisters.
+                    Five exercises. No excuses.
+                </p>
+            </div>
+
+            <div class="daily-availability">
+                <span class="availability-dot"></span>
+                SPECIAL EDITION
+                <strong>READY</strong>
+            </div>
+        </section>
+
+        <section class="challenge-stage"
+                 aria-labelledby="challenge-title">
+            <div class="challenge-art">
+                <div class="guest-label">
+                    <span>THIS WEEK'S GUEST</span>
+                    <strong>ICHIKA NAKANO</strong>
+                </div>
+
+                <div class="character character-nino">
+                    <img
+                        src="/frontend/assets/dc-nino.png"
+                        alt="Nino Nakano, anfitriona del reto diario">
+                    <span class="character-name">NINO</span>
+                </div>
+
+                <div class="character character-ichika">
+                    <img
+                        src="/frontend/assets/dc-ichika.png"
+                        alt="Ichika Nakano, invitada especial">
+                    <span class="character-name">ICHIKA</span>
+                </div>
+
+                <div class="challenge-sticker" aria-hidden="true">
+                    <span>GUEST</span>
+                    <strong>01</strong>
+                </div>
+            </div>
+
+            <div class="challenge-copy">
+                <span class="challenge-kicker">
+                    NINO'S DAILY QUEST
+                </span>
+                <h2 id="challenge-title">
+                    PROVE YOUR<br>
+                    <span>SKILLS.</span>
+                </h2>
+                <p>
+                    Nino has prepared the challenge.
+                    Ichika is here to make things interesting.
+                    Complete all five exercises to claim your reward.
+                </p>
+
+                <div class="challenge-objective">
+                    <span class="objective-marker" aria-hidden="true">◆</span>
+                    <div>
+                        <strong>MISSION OBJECTIVE</strong>
+                        <span>Complete 5 exercises</span>
+                    </div>
+                </div>
+
+                <div class="challenge-reward">
+                    <span class="reward-symbol" aria-hidden="true">✦</span>
+                    <div>
+                        <span>MISSION REWARD</span>
+                        <strong>+30 XP</strong>
+                    </div>
+                </div>
+
+                <a href="#challenge-details"
+                   class="primary-button challenge-button">
+                    <span class="button-icon">▶</span>
+                    START MISSION
+                </a>
+            </div>
+        </section>
+
+        <section class="challenge-details"
+                 aria-labelledby="details-title">
+            <div class="details-heading">
+                <span class="section-index">01 / MISSION BRIEF</span>
+                <h2 id="details-title">
+                    FIVE ROUNDS.<br>
+                    <span>ONE REWARD.</span>
+                </h2>
+                <p>
+                    Every round tests a different English skill.
+                    Can you clear them all?
+                </p>
+            </div>
+
+            <ol class="mission-steps">
+                <li>
+                    <span class="step-number">01</span>
+                    <div class="step-copy">
+                        <strong>VOCABULARY</strong>
+                        <span>Recognize the right words.</span>
+                    </div>
+                    <span class="step-type">WORDS</span>
+                </li>
+
+                <li>
+                    <span class="step-number">02</span>
+                    <div class="step-copy">
+                        <strong>LISTENING</strong>
+                        <span>Catch the meaning.</span>
+                    </div>
+                    <span class="step-type">AUDIO</span>
+                </li>
+
+                <li>
+                    <span class="step-number">03</span>
+                    <div class="step-copy">
+                        <strong>GRAMMAR</strong>
+                        <span>Choose the correct structure.</span>
+                    </div>
+                    <span class="step-type">LOGIC</span>
+                </li>
+
+                <li>
+                    <span class="step-number">04</span>
+                    <div class="step-copy">
+                        <strong>WORD IN CONTEXT</strong>
+                        <span>Find the word that fits.</span>
+                    </div>
+                    <span class="step-type">CONTEXT</span>
+                </li>
+
+                <li>
+                    <span class="step-number">05</span>
+                    <div class="step-copy">
+                        <strong>FINAL ROUND</strong>
+                        <span>Put your knowledge to the test.</span>
+                    </div>
+                    <span class="step-type">FINAL</span>
+                </li>
+            </ol>
+        </section>
+
+        <section class="exercise-zone"
+                 id="exercise-zone"
+                 aria-labelledby="exercise-zone-title">
+            <div class="details-heading exercise-heading">
+                <span class="section-index">02 / THE CHALLENGE</span>
+                <h2 id="exercise-zone-title">
+                    LET'S SEE<br>
+                    <span>WHAT YOU'VE GOT.</span>
+                </h2>
+                <p>
+                    Five sample rounds. Choose your answers
+                    and put your English to the test.
+                </p>
+            </div>
+
+            <article class="exercise-round exercise-vocabulary">
+                <div class="round-heading">
+                    <span class="round-number">ROUND 01</span>
+                    <span class="round-category">VOCABULARY</span>
+                </div>
+                <h3>Pick the correct meaning.</h3>
+                <p class="exercise-question">
+                    What does <strong>"exhausted"</strong> mean?
+                </p>
+                <div class="exercise-options">
+                    <button type="button" class="exercise-option">
+                        <span>A</span>
+                        Very tired
+                    </button>
+                    <button type="button" class="exercise-option">
+                        <span>B</span>
+                        Very excited
+                    </button>
+                    <button type="button" class="exercise-option">
+                        <span>C</span>
+                        Very confused
+                    </button>
+                </div>
+            </article>
+
+            <article class="exercise-round exercise-listening">
+                <div class="round-heading">
+                    <span class="round-number">ROUND 02</span>
+                    <span class="round-category">LISTENING</span>
+                </div>
+                <h3>Listen carefully.</h3>
+                <p class="exercise-question">
+                    Listen to the sentence and choose what you hear.
+                </p>
+                <div class="audio-placeholder" aria-label="Audio de ejemplo, todavía no funcional">
+                    <span class="audio-play-icon" aria-hidden="true">▶</span>
+                    <div class="audio-placeholder-copy">
+                        <strong>LISTENING TRACK 01</strong>
+                        <span>Audio player — coming soon</span>
+                    </div>
+                    <span class="audio-duration">DEMO</span>
+                </div>
+                <div class="exercise-options">
+                    <button type="button" class="exercise-option">
+                        <span>A</span>
+                        She missed the train.
+                    </button>
+                    <button type="button" class="exercise-option">
+                        <span>B</span>
+                        She missed the class.
+                    </button>
+                    <button type="button" class="exercise-option">
+                        <span>C</span>
+                        She missed the bus.
+                    </button>
+                </div>
+            </article>
+
+            <article class="exercise-round exercise-grammar">
+                <div class="round-heading">
+                    <span class="round-number">ROUND 03</span>
+                    <span class="round-category">GRAMMAR</span>
+                </div>
+                <h3>Fix the sentence.</h3>
+                <p class="exercise-question">
+                    She _____ English every day.
+                </p>
+                <div class="exercise-options">
+                    <button type="button" class="exercise-option">
+                        <span>A</span>
+                        study
+                    </button>
+                    <button type="button" class="exercise-option">
+                        <span>B</span>
+                        studies
+                    </button>
+                    <button type="button" class="exercise-option">
+                        <span>C</span>
+                        studying
+                    </button>
+                </div>
+            </article>
+
+            <article class="exercise-round exercise-context">
+                <div class="round-heading">
+                    <span class="round-number">ROUND 04</span>
+                    <span class="round-category">WORD IN CONTEXT</span>
+                </div>
+                <h3>Find the missing word.</h3>
+                <p class="exercise-question">
+                    "It was raining, _____ we stayed at home."
+                </p>
+                <div class="exercise-options">
+                    <button type="button" class="exercise-option">
+                        <span>A</span>
+                        so
+                    </button>
+                    <button type="button" class="exercise-option">
+                        <span>B</span>
+                        because
+                    </button>
+                    <button type="button" class="exercise-option">
+                        <span>C</span>
+                        although
+                    </button>
+                </div>
+            </article>
+
+            <article class="exercise-round exercise-final">
+                <div class="round-heading">
+                    <span class="round-number">ROUND 05</span>
+                    <span class="round-category">FINAL ROUND</span>
+                </div>
+                <h3>One last question.</h3>
+                <p class="exercise-question">
+                    Which sentence is grammatically correct?
+                </p>
+                <div class="exercise-options">
+                    <button type="button" class="exercise-option">
+                        <span>A</span>
+                        I have seen that movie yesterday.
+                    </button>
+                    <button type="button" class="exercise-option">
+                        <span>B</span>
+                        I saw that movie yesterday.
+                    </button>
+
+                    <button type="button" class="exercise-option">
+                        <span>C</span>
+                        I seeing that movie yesterday.
+                    </button>
+                </div>
+                <div class="final-round-mark">
+                    FINAL TEST / NO HINTS
+                </div>
+            </article>
+
+            <p class="mission-note">
+                Static exercise preview. Answer checking, audio playback,
+                scoring and XP rewards will be added during the JavaScript
+                and backend development phases.
+            </p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-brand">
+            <span>NINO'S</span>
+            <strong>NO EXCUSES.</strong>
+        </div>
+
+        <p>Keep going. You're not completely hopeless.</p>
+
+        <span class="footer-version">
+            ENGLISHLAB / 2026 ·
+            <a href="mi-github">Fernando Barrezueta</a>
+        </span>
+    </footer>
+
+</body>
+</html>

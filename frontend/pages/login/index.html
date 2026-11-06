@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player Access | EnglishLab</title>
+    <link rel="stylesheet" href="/frontend/css/style.css">
+    <link rel="stylesheet" href="/frontend/css/login.css">
+</head>
+
+<body>
+    <div class="ambient-grid" aria-hidden="true"></div>
+    <div class="ambient-glow" aria-hidden="true"></div>
+    <div class="scanlines" aria-hidden="true"></div>
+
+    <header class="login-header">
+        <a href="/frontend/pages/home/index.html" class="brand">
+            <span class="brand-small">NINO'S</span>
+            <span class="brand-main">NO EXCUSES.</span>
+        </a>
+
+        <div class="login-header-status">
+            <span class="status-indicator"></span>
+
+            <div class="status-copy">
+                <span class="status-title">PLAYER ACCESS</span>
+                <span class="status-subtitle">IDENTITY VERIFICATION</span>
+            </div>
+        </div>
+
+        <a href="/frontend/pages/home/index.html" class="back-home">
+            <span class="back-arrow">←</span>
+            <span>BACK TO HOME</span>
+        </a>
+    </header>
+
+    <main class="login-page">
+
+        <section class="login-scene" aria-label="Acceso a EnglishLab">
+
+            <div class="login-cast">
+                <div class="login-character character-itsuki">
+                    <img
+                        src="/frontend/assets/itsuki-login.png"
+                        alt="Itsuki Nakano, supervisora del acceso">
+                    <div class="scene-stamp">
+                        <span>NO</span>
+                        <strong>EXCUSES</strong>
+                        <span>JUST PRACTICE</span>
+                    </div>
+                    <div class="character-plate">
+                        <span class="plate-tag"><span>02</span> ACCESS CONTROL</span>
+                        <strong>ITSUKI</strong>
+                    </div>
+                </div>
+
+                <div class="login-character character-nino">
+                    <img
+                        src="/frontend/assets/nino-login.png"
+                        alt="Nino Nakano, anfitriona de EnglishLab">
+                    <div class="scene-message">
+                        <span class="message-indicator"></span>
+                        <p>You're finally here.</p>
+                        <span class="message-author">— NINO</span>
+                    </div>
+                    <div class="character-plate">
+                        <span class="plate-tag"><span>01</span> MAIN HOST</span>
+                        <strong>NINO</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="login-console">
+                <div class="console-body">
+                    <div class="console-intro">
+                        <div class="console-heading">
+                            <span class="eyebrow">
+                                <span class="eyebrow-line"></span>
+                                PLAYER AUTHENTICATION
+                            </span>
+                            <span class="system-status">
+                                 ONLINE
+                            </span>
+                        </div>
+                        <div class="login-title">
+                            <span class="title-prefix">READY TO</span>
+                            <h1>LOG<span> IN.</span></h1>
+                            <p>
+                                Your next level won't unlock itself.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="console-access">
+                        <div class="console-divider">
+                            <span></span>
+                            <span>IDENTITY CHECK</span>
+                            <span></span>
+                        </div>
+                        <form class="login-form">
+                            <div class="form-field">
+                                <label for="username">PLAYER NAME</label>
+                                <div class="input-shell">
+                                    <span class="input-prefix">@</span>
+                                    <input
+                                        type="text"
+                                        id="username"
+                                        name="username"
+                                        placeholder="Enter your username"
+                                        autocomplete="username"
+                                        required>
+                                </div>
+                            </div>
+                            <div class="form-field">
+                                <label for="password">ACCESS KEY</label>
+                                <div class="input-shell">
+                                    <span class="input-prefix">◆</span>
+                                    <input
+                                        type="password"
+                                        id="password"
+                                        name="password"
+                                        placeholder="Enter your password"
+                                        autocomplete="current-password"
+                                        required>
+                                </div>
+                            </div>
+                            <div class="form-options">
+                                <label class="remember-option">
+                                    <input type="checkbox" name="remember">
+                                    <span>REMEMBER ME</span>
+                                </label>
+                                <a href="#recovery" class="recovery-link">
+                                    FORGOT KEY?
+                                </a>
+                            </div>
+                            <button type="submit" class="access-button">
+                                <span class="access-button-label">
+                                    ENTER ENGLISHLAB
+                                </span>
+                                <span class="access-button-icon" aria-hidden="true">↗</span>
+                            </button>
+
+                            <p class="form-disclaimer">
+                                ACCESS GRANTED? THAT'S UP TO YOU.
+                            </p>
+                        </form>
+                    </div>
+                    <div class="login-register">
+                        <span>NEW PLAYER?</span>
+                        <a href="#register">CREATE ACCOUNT ↗</a>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <div class="login-footnote">
+            <span class="footnote-symbol">✳</span>
+            <p>
+                No shortcuts. Just you getting better.
+            </p>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-brand">
+            <span>NINO'S</span>
+            <strong>NO EXCUSES.</strong>
+        </div>
+        <p>Keep going. You're not completely hopeless.</p>
+        <span class="footer-version">
+            ENGLISHLAB / 2026 ·
+            <a href="mi-github">Fernando Barrezueta</a>
+        </span>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,853 @@
+
+/* 11. PÁGINA: DAILY CHALLENGE — NINO × ICHIKA */
+
+.daily-page {
+    width: min(1200px, calc(100% - 48px));
+    margin-inline: auto;
+    padding: 68px 0 100px;
+}
+
+/* MISSION HEADING */
+
+.daily-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 32px;
+    margin-bottom: 48px;
+    animation: dc-enter 650ms ease-out both;
+}
+
+.daily-heading-copy {
+    max-width: 780px;
+}
+
+.daily-heading h1 {
+    margin: 24px 0 18px;
+    color: var(--text);
+    font-family: var(--font-pixel);
+    font-size: clamp(2.1rem, 5.5vw, 4.4rem);
+    line-height: 1.45;
+    letter-spacing: -2px;
+}
+
+.daily-heading h1 span {
+    color: var(--primary);
+    text-shadow: 4px 4px 0 var(--primary-dark);
+}
+
+.daily-heading-copy > p {
+    max-width: 530px;
+    color: var(--text-muted);
+    font-size: 1.15rem;
+    line-height: 1.7;
+}
+
+.daily-availability {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 9px;
+    padding-bottom: 8px;
+    color: var(--text-muted);
+    font-family: var(--font-pixel);
+    font-size: 0.55rem;
+    white-space: nowrap;
+}
+
+.daily-availability strong {
+    padding: 9px 10px;
+    background: var(--ichika-yellow);
+    color: var(--ichika-900);
+    box-shadow: 3px 3px 0 var(--ichika-600);
+    font-size: 0.55rem;
+}
+
+.availability-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--ichika-400);
+    box-shadow: 0 0 12px rgb(var(--ichika-rgb) / 65%);
+}
+
+/* CROSSOVER STAGE */
+
+.challenge-stage {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: center;
+    min-height: 500px;
+    margin-bottom: 120px;
+    isolation: isolate;
+}
+
+.challenge-art {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    min-width: 0;
+    min-height: 460px;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.challenge-art::before {
+    content: "";
+    position: absolute;
+    z-index: -2;
+    top: 8%;
+    left: 5%;
+    width: 70%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: radial-gradient(
+        circle,
+        rgb(var(--primary-rgb) / 27%),
+        rgb(var(--primary-rgb) / 8%) 55%,
+        transparent 72%
+    );
+}
+
+.challenge-art::after {
+    content: "";
+    position: absolute;
+    z-index: -2;
+    right: 2%;
+    bottom: 5%;
+    width: 55%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: radial-gradient(
+        circle,
+        rgb(var(--ichika-rgb) / 25%),
+        rgb(var(--ichika-rgb) / 9%) 55%,
+        transparent 75%
+    );
+}
+
+.guest-label {
+    position: absolute;
+    z-index: 4;
+    top: 0%;
+    left: 2%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 12px 14px;
+    border-left: 3px solid var(--ichika-yellow);
+    background: rgb(var(--background-rgb) / 5%);
+    transform: rotate(-2deg);
+}
+
+.guest-label span {
+    color: var(--text-muted);
+    font-family: var(--font-pixel);
+    font-size: 0.45rem;
+}
+
+.guest-label strong {
+    color: var(--ichika-yellow);
+    font-family: var(--font-pixel);
+    font-size: 0.6rem;
+}
+
+.character {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 56%;
+    min-width: 0;
+}
+
+.character img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: contain;
+    object-position: bottom;
+    transition: transform 350ms ease;
+}
+
+.character-nino {
+    z-index: 2;
+    margin-right: -12%;
+}
+
+.character-nino img {
+    filter: drop-shadow(
+        0 0 24px rgb(var(--primary-rgb) / 24%)
+    );
+    animation: nino-idle 3.5s ease-in-out infinite;
+    transform-origin: center bottom;
+}
+
+.character-ichika {
+    z-index: 1;
+    margin-left: -12%;
+    margin-bottom: -5%;
+    transform: translateY(16px) scale(0.85);
+}
+
+.character-ichika img {
+    filter: drop-shadow(0 0 22px rgb(var(--ichika-rgb) / 20%));
+    animation: ichika-idle 3.5s ease-in-out infinite;
+    transform-origin: center bottom;
+}
+
+.character-name {
+    position: absolute;
+    right: 8%;
+    bottom: 12px;
+    padding: 7px 9px;
+    background: var(--primary);
+    color: white;
+    font-family: var(--font-pixel);
+    font-size: 0.48rem;
+    letter-spacing: 1px;
+}
+
+.character-ichika .character-name {
+    right: 3%;
+    background: var(--ichika-yellow);
+    color: var(--ichika-900);
+}
+
+.challenge-sticker {
+    position: absolute;
+    z-index: 5;
+    top: 5%;
+    right: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 76px;
+    height: 76px;
+    background: var(--ichika-yellow);
+    color: var(--ichika-900);
+    box-shadow: 5px 5px 0 var(--ichika-600);
+    transform: rotate(8deg);
+}
+
+.challenge-sticker span {
+    font-family: var(--font-pixel);
+    font-size: 0.46rem;
+}
+
+.challenge-sticker strong {
+    margin-top: 7px;
+    font-family: var(--font-pixel);
+    font-size: 1.35rem;
+}
+
+/* MISSION DETAILS */
+
+.challenge-copy {
+    position: relative;
+    z-index: 2;
+    padding: 34px 0 34px 38px;
+    border-left: 2px solid var(--primary);
+    animation: dc-enter 700ms 120ms ease-out both;
+}
+
+.challenge-kicker {
+    color: var(--ichika-yellow);
+    font-family: var(--font-pixel);
+    font-size: 0.55rem;
+    letter-spacing: 1px;
+}
+
+.challenge-copy h2 {
+    margin: 20px 0;
+    color: var(--text);
+    font-family: var(--font-pixel);
+    font-size: clamp(1.35rem, 2.7vw, 2.25rem);
+    line-height: 1.7;
+}
+
+.challenge-copy h2 span {
+    color: var(--primary);
+}
+
+.challenge-copy > p {
+    max-width: 450px;
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.challenge-objective {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-top: 30px;
+}
+
+.objective-marker {
+    color: var(--ichika-yellow);
+    font-size: 1.3rem;
+}
+
+.challenge-objective > div,
+.challenge-reward > div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.challenge-objective strong,
+.challenge-reward > div > span {
+    color: var(--text-muted);
+    font-family: var(--font-pixel);
+    font-size: 0.48rem;
+    line-height: 1.8;
+}
+
+.challenge-objective > div > span {
+    color: var(--text);
+    font-size: 1rem;
+}
+
+.challenge-reward {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin: 24px 0 30px;
+}
+
+.reward-symbol {
+    color: var(--ichika-yellow);
+    font-size: 1.8rem;
+}
+
+.challenge-reward strong {
+    color: var(--ichika-yellow);
+    font-family: var(--font-pixel);
+    font-size: 1.2rem;
+}
+
+.challenge-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+.challenge-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 4px 4px 0 var(--ichika-600);
+}
+
+/* MISSION BRIEF */
+
+.challenge-details {
+    padding-top: 38px;
+    border-top: 1px solid var(--line);
+    animation: dc-enter 700ms 180ms ease-out both;
+}
+
+.details-heading {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: end;
+    column-gap: 32px;
+    row-gap: 14px;
+    margin-bottom: 36px;
+}
+
+.section-index {
+    grid-column: 1 / -1;
+    color: var(--ichika-yellow);
+    font-family: var(--font-pixel);
+    font-size: 0.52rem;
+}
+
+.details-heading h2 {
+    margin: 0;
+    color: var(--text);
+    font-family: var(--font-pixel);
+    font-size: clamp(1.25rem, 2.5vw, 1.9rem);
+    line-height: 1.8;
+}
+
+.details-heading h2 span {
+    color: var(--primary);
+}
+
+.details-heading > p {
+    max-width: 350px;
+    justify-self: end;
+    color: var(--text-muted);
+    line-height: 1.7;
+}
+
+.mission-steps {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.mission-steps li {
+    position: relative;
+    min-width: 0;
+    padding: 20px 16px 20px 0;
+    border-top: 2px solid var(--line);
+    transition: transform 220ms ease, border-color 220ms ease;
+}
+
+.mission-steps li:nth-child(even) .step-number {
+    color: var(--ichika-yellow);
+}
+
+.mission-steps li:hover {
+    border-color: var(--primary);
+    transform: translateY(-4px);
+}
+
+.mission-steps li:nth-child(2):hover,
+.mission-steps li:nth-child(4):hover {
+    border-color: var(--ichika-yellow);
+}
+
+.step-number {
+    display: block;
+    margin-bottom: 22px;
+    color: var(--primary);
+    font-family: var(--font-pixel);
+    font-size: 0.75rem;
+}
+
+.step-copy {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.step-copy strong {
+    color: var(--text);
+    font-family: var(--font-pixel);
+    font-size: 0.56rem;
+    line-height: 1.9;
+}
+
+.step-copy > span {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.step-type {
+    display: inline-block;
+    margin-top: 18px;
+    color: var(--primary);
+    font-family: var(--font-pixel);
+    font-size: 0.43rem;
+    letter-spacing: 1px;
+}
+
+.mission-steps li:nth-child(even) .step-type {
+    color: var(--ichika-yellow);
+}
+
+/* EXERCISE ZONE */
+
+.exercise-zone {
+    margin-top: 110px;
+    padding-top: 38px;
+    border-top: 1px solid var(--line);
+    animation: dc-enter 700ms 240ms ease-out both;
+}
+
+.exercise-heading {
+    margin-bottom: 48px;
+}
+
+.exercise-round {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(170px, 0.7fr) minmax(0, 1.3fr);
+    column-gap: 48px;
+    row-gap: 16px;
+    padding: 34px 0 38px 24px;
+    border-left: 3px solid var(--primary);
+    border-bottom: 1px solid var(--line);
+}
+
+.exercise-round:nth-of-type(even) {
+    border-left-color: var(--ichika-yellow);
+}
+
+.round-heading {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 4px;
+}
+
+.round-number {
+    color: var(--primary);
+    font-family: var(--font-pixel);
+    font-size: 0.58rem;
+}
+
+.exercise-round:nth-of-type(even) .round-number {
+    color: var(--ichika-yellow);
+}
+
+.round-category {
+    color: var(--text-muted);
+    font-family: var(--font-pixel);
+    font-size: 0.48rem;
+    text-align: right;
+}
+
+.exercise-round h3 {
+    align-self: start;
+    margin: 0;
+    color: var(--text);
+    font-family: var(--font-pixel);
+    font-size: 0.8rem;
+    line-height: 1.9;
+}
+
+.exercise-question {
+    grid-column: 2;
+    grid-row: 2;
+    align-self: start;
+    margin: 0 0 8px;
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.exercise-question strong {
+    color: var(--text);
+}
+
+.exercise-options {
+    grid-column: 2;
+    display: grid;
+    gap: 10px;
+}
+
+.exercise-option {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    width: 100%;
+    min-height: 52px;
+    padding: 12px 15px;
+    border: 1px solid rgb(var(--text-rgb) / 13%);
+    background: rgb(var(--surface-rgb) / 55%);
+    color: var(--text);
+    font: inherit;
+    line-height: 1.6;
+    text-align: left;
+    cursor: pointer;
+    transition:
+        border-color 180ms ease,
+        background-color 180ms ease,
+        transform 180ms ease;
+}
+
+.exercise-option > span {
+    display: grid;
+    flex: 0 0 27px;
+    width: 27px;
+    height: 27px;
+    place-items: center;
+    background: rgb(var(--primary-rgb) / 15%);
+    color: var(--primary);
+    font-family: var(--font-pixel);
+    font-size: 0.55rem;
+}
+
+.exercise-round:nth-of-type(even) .exercise-option > span {
+    background: rgb(var(--ichika-rgb) / 13%);
+    color: var(--ichika-yellow);
+}
+
+.exercise-option:hover {
+    border-color: var(--primary);
+    background: rgb(var(--primary-rgb) / 8%);
+    transform: translateX(4px);
+}
+
+.exercise-round:nth-of-type(even) .exercise-option:hover {
+    border-color: var(--ichika-yellow);
+    background: rgb(var(--ichika-rgb) / 6%);
+}
+
+.exercise-option:focus-visible {
+    outline: 2px solid var(--ichika-600);
+    outline-offset: 3px;
+}
+
+.audio-placeholder {
+    grid-column: 2;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 8px;
+    padding: 17px 0;
+    border-top: 1px solid rgb(var(--ichika-rgb) / 35%);
+    border-bottom: 1px solid rgb(var(--ichika-rgb) / 35%);
+}
+
+.audio-play-icon {
+    display: grid;
+    flex: 0 0 44px;
+    width: 44px;
+    height: 44px;
+    place-items: center;
+    background: var(--ichika-yellow);
+    color: var(--ichika-900);
+    font-size: 0.85rem;
+}
+
+.audio-placeholder-copy {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.audio-placeholder-copy strong {
+    color: var(--text);
+    font-family: var(--font-pixel);
+    font-size: 0.52rem;
+    line-height: 1.8;
+}
+
+.audio-placeholder-copy > span {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.audio-duration {
+    color: var(--ichika-yellow);
+    font-family: var(--font-pixel);
+    font-size: 0.48rem;
+}
+
+.exercise-final {
+    border-left-color: var(--ichika-yellow);
+    background: linear-gradient(
+        90deg,
+        rgb(var(--ichika-rgb) / 5%),
+        transparent 48%
+    );
+}
+
+.exercise-final .round-number {
+    color: var(--ichika-yellow);
+}
+
+.final-round-mark {
+    grid-column: 2;
+    margin-top: 8px;
+    color: var(--primary);
+    font-family: var(--font-pixel);
+    font-size: 0.48rem;
+    letter-spacing: 1px;
+}
+
+.mission-note {
+    max-width: 680px;
+    margin: 28px 0 0;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    line-height: 1.8;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+    .challenge-stage {
+        grid-template-columns: 1fr 0.95fr;
+        min-height: 390px;
+        margin-bottom: 90px;
+    }
+
+    .challenge-art {
+        min-height: 370px;
+    }
+
+    .character img {
+        max-height: 360px;
+    }
+
+    .challenge-copy {
+        padding-left: 24px;
+    }
+
+    .mission-steps {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        row-gap: 24px;
+    }
+
+    .exercise-round {
+        column-gap: 28px;
+    }
+}
+
+@media (max-width: 650px) {
+    .daily-page {
+        width: calc(100% - 32px);
+        padding-top: 42px;
+    }
+
+    .daily-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 22px;
+        margin-bottom: 32px;
+    }
+
+    .daily-heading h1 {
+        font-size: clamp(1.8rem, 8vw, 3rem);
+        letter-spacing: -1px;
+    }
+
+    .daily-availability {
+        white-space: normal;
+    }
+
+    .challenge-stage {
+        grid-template-columns: 1fr;
+        margin-bottom: 76px;
+    }
+
+    .challenge-art {
+        min-height: 330px;
+        max-height: 410px;
+    }
+
+    .character img {
+        max-height: 340px;
+    }
+
+    .guest-label {
+        top: 12%;
+        left: 0;
+        padding: 9px 10px;
+    }
+
+    .guest-label span {
+        font-size: 0.38rem;
+    }
+
+    .guest-label strong {
+        font-size: 0.47rem;
+    }
+
+    .challenge-sticker {
+        top: 5%;
+        right: 4%;
+        width: 62px;
+        height: 62px;
+    }
+
+    .challenge-sticker strong {
+        font-size: 1.05rem;
+    }
+
+    .character-name {
+        bottom: 6px;
+        font-size: 0.4rem;
+    }
+
+    .challenge-copy {
+        margin-top: 24px;
+        padding: 28px 0 0;
+        border-top: 2px solid var(--primary);
+        border-left: 0;
+    }
+
+    .details-heading {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .details-heading > p {
+        justify-self: start;
+    }
+
+    .mission-steps {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        column-gap: 18px;
+    }
+
+    .exercise-zone {
+        margin-top: 76px;
+    }
+
+    .exercise-round {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 28px 0 30px 16px;
+    }
+
+    .round-heading {
+        grid-column: 1;
+    }
+
+    .exercise-round h3 {
+        grid-column: 1;
+        grid-row: auto;
+    }
+
+    .exercise-question,
+    .exercise-options,
+    .audio-placeholder,
+    .final-round-mark {
+        grid-column: 1;
+        grid-row: auto;
+    }
+
+    .round-number {
+        font-size: 0.5rem;
+    }
+
+    .round-category {
+        font-size: 0.4rem;
+    }
+
+    .exercise-round h3 {
+        font-size: 0.7rem;
+    }
+
+    .exercise-option {
+        font-size: 0.95rem;
+    }
+
+    .audio-placeholder {
+        flex-wrap: wrap;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .daily-heading,
+    .challenge-copy,
+    .challenge-details,
+    .exercise-zone {
+        animation: none;
+    }
+
+    .character img,
+    .mission-steps li,
+    .exercise-option,
+    .challenge-button {
+        transition: none;
+    }
+}

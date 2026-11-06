@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/frontend/css/style.css">
+    <link rel="stylesheet" href="/frontend/css/home.css">
+    <title>NO EXCUSES. — EnglishLab</title>
+</head>
+
+<body>
+    <!-- Fondo general, aplicado para cada página -->
+    <div class="ambient-grid"></div>
+    <div class="ambient-glow"></div>
+    <div class="scanlines"></div>
+    <!-- Encabezado, de igual manera, aplicado para todas las páginas excepto Login -->
+    <header class="site-header">
+        <a href="/frontend/pages/home/index.html" class="brand">
+            <span class="brand-small">NINO'S</span>
+            <span class="brand-main">NO EXCUSES.</span>
+        </a>
+
+        <nav class="main-nav">
+            <a href="/frontend/pages/home/index.html" class="active">
+                <span>01</span>
+                HOME
+            </a>
+            <a href="/frontend/pages/practice/index.html">
+                <span>02</span>
+                PRACTICE
+            </a>
+            <a href="/frontend//pages/progress/index.html">
+                <span>03</span>
+                PROGRESS
+            </a>
+            <a href="/frontend/pages/settings/index.html"
+               class="settings"
+               aria-label="Settings">⚙</a>
+        </nav>
+
+        <div class="header-account">
+            <div class="player-status">
+                <span class="status-dot"></span>
+                <span class="player-name">PLAYER</span>
+            </div>
+
+            <a href="/frontend/pages/login/index.html"
+            class="login-link">
+                <span class="login-icon">↗</span>
+                LOG IN
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Sección Inicial; Incluye Palabra de fondo, título, botón, Nino, etc.  -->
+        <section class="hero">
+            <!-- Palabra "English" atrás -->
+            <div class="hero-background-word">ENGLISH</div>
+            <!-- Apartado izquierdo -->
+            <div class="hero-copy">
+                <div class="eyebrow">
+                    <span class="eyebrow-line"></span>
+                    NINO'S TRAINING ROOM
+                </div>
+                <h1>
+                    ENGLISH
+                    <span>WITHOUT</span>
+                    EXCUSES.
+                </h1>
+                <p class="hero-description">
+                    You said you wanted to learn English.
+                    <strong>So prove it.</strong>
+                </p>
+                <div class="hero-actions">
+                    <a href="/frontend/pages/practice/index.html" class="primary-button">
+                        <span class="button-icon">▶</span>
+                        START PRACTICE
+                    </a>
+                    <span class="action-hint">
+                        NO CRYING. I'M WATCHING.
+                    </span>
+                </div>
+                <div class="hero-meta">
+                    <div>
+                        <span>STATUS</span>
+                        <strong>READY</strong>
+                    </div>
+                    <div>
+                        <span>MODE</span>
+                        <strong>LEARNING</strong>
+                    </div>
+                    <div>
+                        <span>LEVEL</span>
+                        <strong>01</strong>
+                    </div>
+                </div>
+            </div>
+            <!-- Apartado derecho (globo de texto, Nino) -->
+            <div class="character-stage">
+                <div class="character-glow"></div>
+                <div class="character-label">
+                    <span>NINO NAKANO</span>
+                    <small>YOUR INSTRUCTOR</small>
+                </div>
+                <div class="speech-box">
+                    <span class="speech-name">NINO</span>
+                    <p>
+                        You're here to learn, right?
+                        Don't make me regret this.
+                    </p>
+                    <button type="button" class="listen-button">
+                        ▶ LISTEN
+                    </button>
+                </div>
+                <div class="character-image">
+                    <img
+                        src="/frontend/assets/nino.png"
+                        alt="Nino Nakano">
+                </div>
+                <div class="character-shadow"></div>
+                <div class="floating-pixel pixel-one"></div>
+                <div class="floating-pixel pixel-two"></div>
+                <div class="floating-pixel pixel-three"></div>
+            </div>
+
+            <div class="scroll-indicator">
+                <span>SCROLL TO SELECT</span>
+                <i></i>
+            </div>
+        </section>
+
+        <!-- Sección secundaria; Incluye un encabezado descriptivo y las 3 áreas prácticas -->
+        <section class="practice-section">
+            <!-- Encabezado del apartado -->
+            <div class="section-heading">
+                <div>
+                    <span class="section-index">02 / TRAINING</span>
+                    <h2>
+                        PICK YOUR
+                        <span>WEAPON.</span>
+                    </h2>
+                </div>
+                <p>
+                    Three ways to get better.
+                    No excuses.
+                </p>
+            </div>
+            <!-- Lista de las áreas prácticas: Vocabulary, Listening y Grammar -->
+            <div class="practice-list">
+                <a
+                    href="/frontend/pages/vocabulary/index.html"
+                    class="practice-item">
+                    <div class="practice-number">01</div>
+                    <div class="practice-copy">
+                        <span class="practice-type">TRAIN YOUR MEMORY</span>
+                        <h3>VOCABULARY</h3>
+                        <p>
+                            Words you actually need.
+                            Try not to forget them five minutes later.
+                        </p>
+                    </div>
+                    <div class="practice-visual">
+                        <img
+                            src="/frontend/assets/vocabulary.png"
+                            alt="Vocabulary">
+                    </div>
+                    <span class="practice-arrow">↗</span>
+                </a>
+                <a
+                    href="/frontend/pages/listening/index.html"
+                    class="practice-item">
+                    <div class="practice-number">02</div>
+                    <div class="practice-copy">
+                        <span class="practice-type">TRAIN YOUR EARS</span>
+                        <h3>LISTENING</h3>
+                        <p>
+                            Because understanding English
+                            is slightly more complicated than reading it.
+                        </p>
+                    </div>
+                    <div class="practice-visual">
+                        <img
+                            src="/frontend/assets/listening.png"
+                            alt="Listening">
+                    </div>
+                    <span class="practice-arrow">↗</span>
+                </a>
+                <a
+                    href="/frontend/pages/grammar/index.html"
+                    class="practice-item">
+                    <div class="practice-number">03</div>
+                    <div class="practice-copy">
+                        <span class="practice-type">TRAIN YOUR BRAIN</span>
+                        <h3>GRAMMAR</h3>
+                        <p>
+                            Yes, there are rules.
+                            No, you don't get to ignore them.
+                        </p>
+                    </div>
+                    <div class="practice-visual">
+                        <img
+                            src="/frontend/assets/grammar.png"
+                            alt="Grammar">
+                    </div>
+                    <span class="practice-arrow">↗</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de página, es similar en todas las páginas -->
+    <footer class="site-footer">
+        <div class="footer-brand">
+            <span>NINO'S</span>
+            <strong>NO EXCUSES.</strong>
+        </div>
+        <p>Keep going. You're not completely hopeless.</p>
+        <span class="footer-version">
+            ENGLISHLAB / 2026 ·
+            <a href="mi-github">Fernando Barrezueta</a>
+        </span>
+    </footer>
+
+</body>
+</html>

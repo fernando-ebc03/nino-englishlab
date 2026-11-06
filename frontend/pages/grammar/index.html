@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#110d14">
+    <meta name="description" content="Explore English grammar with clear explanations, sentence structures and practical examples in EnglishLab.">
+    <link rel="stylesheet" href="/frontend/css/style.css">
+    <link rel="stylesheet" href="/frontend/css/grammar.css">
+    <title>Grammar Lab · Nino's No Excuses</title>
+</head>
+
+<body class="grammar-page">
+
+    <div class="ambient-grid" aria-hidden="true"></div>
+    <div class="ambient-glow" aria-hidden="true"></div>
+    <div class="scanlines" aria-hidden="true"></div>
+
+    <header class="site-header">
+        <a href="/frontend/pages/home/index.html"
+           class="brand"
+           aria-label="Nino's No Excuses — Home">
+            <span class="brand-small">NINO'S</span>
+            <span class="brand-main">NO EXCUSES.</span>
+        </a>
+
+        <nav class="main-nav" aria-label="Main navigation">
+            <a href="/frontend/pages/home/index.html">
+                <span>01</span> HOME
+            </a>
+            <a href="/frontend/pages/practice/index.html" class="active">
+                <span>02</span> PRACTICE
+            </a>
+            <a href="/frontend/pages/progress/index.html">
+                <span>03</span> PROGRESS
+            </a>
+            <a href="/frontend/pages/settings/index.html"
+               class="settings"
+               aria-label="Settings">⚙</a>
+        </nav>
+
+        <div class="header-account">
+            <div class="player-status">
+                <span class="status-dot"></span>
+                <span class="player-name">PLAYER</span>
+            </div>
+
+            <a href="/frontend/pages/login/index.html"
+            class="login-link">
+                <span class="login-icon">↗</span>
+                LOG IN
+            </a>
+        </div>
+    </header>
+
+    <main id="grammar-page">
+
+        <section class="grammar-hero" aria-labelledby="grammar-title">
+            <div class="grammar-hero-copy">
+                <div class="grammar-eyebrow">
+                    GRAMMAR TRAINING / 03
+                </div>
+                <p class="grammar-overline">YOUR NEXT SKILL TREE</p>
+                <h1 id="grammar-title">
+                    GRAMMAR
+                    <span>LAB.</span>
+                </h1>
+                <p class="grammar-description">
+                    Stop guessing. Start understanding.
+                    Learn how English works, one pattern at a time.
+                </p>
+                <div class="grammar-hero-meta">
+
+                    <div class="grammar-level">
+                        <span class="grammar-meta-label">CURRENT LEVEL</span>
+                        <strong>A1</strong>
+                        <span class="grammar-level-name">BEGINNER</span>
+                    </div>
+                    <div class="grammar-meta-divider" aria-hidden="true"></div>
+
+                    <div class="grammar-unit-count">
+                        <span class="grammar-meta-label">LEARNING PATH</span>
+                        <strong>01 <span>/ 05</span></strong>
+                        <span class="grammar-level-name">UNIT IN PROGRESS</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="grammar-hero-visual" aria-hidden="true">
+                <div class="grammar-orbit grammar-orbit-outer"></div>
+                <div class="grammar-orbit grammar-orbit-inner"></div>
+                <div class="grammar-core">
+                    <span class="grammar-core-symbol">Aa</span>
+                    <span class="grammar-core-caption">LANGUAGE CORE</span>
+                </div>
+                <span class="grammar-orbit-label grammar-label-top">
+                    SUBJECT
+                </span>
+                <span class="grammar-orbit-label grammar-label-right">
+                    VERB
+                </span>
+                <span class="grammar-orbit-label grammar-label-bottom">
+                    MEANING
+                </span>
+                <span class="grammar-coordinate grammar-coordinate-one">
+                    SYS.01
+                </span>
+                <span class="grammar-coordinate grammar-coordinate-two">
+                    001 / EN
+                </span>
+            </div>
+        </section>
+
+        <section class="grammar-map-section"
+                 aria-labelledby="grammar-map-title">
+            <div class="grammar-section-heading">
+                <div>
+                    <span class="grammar-section-index">01 / NAVIGATION</span>
+                    <h2 id="grammar-map-title">THE LEARNING MAP</h2>
+                    <p>
+                        Every rule connects to something you can say.
+                    </p>
+                </div>
+
+                <span class="grammar-map-level">A1 — BEGINNER</span>
+            </div>
+
+            <div class="grammar-map">
+                <div class="grammar-map-route" aria-hidden="true">
+                    <span class="grammar-route-segment route-complete"></span>
+                    <span class="grammar-route-segment route-current"></span>
+                    <span class="grammar-route-segment"></span>
+                    <span class="grammar-route-segment"></span>
+                </div>
+                <article class="grammar-node grammar-node-complete">
+                    <div class="grammar-node-marker">
+                        <span>✓</span>
+                    </div>
+                    <div class="grammar-node-info">
+                        <span class="grammar-node-status">01 / FOUNDATION</span>
+                        <h3>Sentence Basics</h3>
+                        <p>Meet the building blocks.</p>
+                    </div>
+                    <span class="grammar-node-state">READY</span>
+                </article>
+                <article class="grammar-node grammar-node-current"
+                         aria-current="step">
+                    <div class="grammar-node-marker">
+                        <span>02</span>
+                    </div>
+                    <div class="grammar-node-info">
+                        <span class="grammar-node-status">02 / CURRENT UNIT</span>
+                        <h3>The Verb To Be</h3>
+                        <p>Talk about who you are and how you feel.</p>
+                    </div>
+                    <span class="grammar-node-state">IN PROGRESS</span>
+                </article>
+                <article class="grammar-node grammar-node-locked">
+                    <div class="grammar-node-marker">
+                        <span>03</span>
+                    </div>
+                    <div class="grammar-node-info">
+                        <span class="grammar-node-status">03 / NEXT UNIT</span>
+                        <h3>Subject Pronouns</h3>
+                        <p>I, you, he, she, it, we, they.</p>
+                    </div>
+                    <span class="grammar-node-state">UP NEXT</span>
+                </article>
+                <article class="grammar-node grammar-node-locked">
+                    <div class="grammar-node-marker">
+                        <span>04</span>
+                    </div>
+                    <div class="grammar-node-info">
+                        <span class="grammar-node-status">04 / NEXT UNIT</span>
+                        <h3>Present Simple</h3>
+                        <p>Describe habits and everyday routines.</p>
+                    </div>
+                    <span class="grammar-node-state">LOCKED</span>
+                </article>
+                <article class="grammar-node grammar-node-locked">
+                    <div class="grammar-node-marker">
+                        <span>05</span>
+                    </div>
+                    <div class="grammar-node-info">
+                        <span class="grammar-node-status">05 / NEXT UNIT</span>
+                        <h3>Questions &amp; Negatives</h3>
+                        <p>Ask questions and say what isn't true.</p>
+                    </div>
+                    <span class="grammar-node-state">LOCKED</span>
+                </article>
+            </div>
+
+            <p class="grammar-map-note">
+                <span aria-hidden="true">✦</span>
+                Your path is built one concept at a time.
+            </p>
+        </section>
+
+        <section class="grammar-theory"
+                 aria-labelledby="grammar-theory-title">
+            <div class="grammar-section-heading">
+                <div>
+                    <span class="grammar-section-index">02 / KNOWLEDGE BASE</span>
+                    <h2 id="grammar-theory-title">INSIDE THE RULE</h2>
+                    <p>
+                        Understand the structure before you use it.
+                    </p>
+                </div>
+                <span class="grammar-topic-id">TOPIC_001</span>
+            </div>
+
+            <div class="grammar-workspace">
+                <aside class="grammar-topic-index"
+                       aria-label="Current topic sections">
+                    <span class="grammar-index-heading">
+                        IN THIS LESSON
+                    </span>
+                    <div class="grammar-index-item is-active">
+                        <span>01</span>
+                        <span>Core concept</span>
+                    </div>
+                    <div class="grammar-index-item">
+                        <span>02</span>
+                        <span>Sentence structure</span>
+                    </div>
+                    <div class="grammar-index-item">
+                        <span>03</span>
+                        <span>Examples</span>
+                    </div>
+                    <div class="grammar-index-item">
+                        <span>04</span>
+                        <span>Common mistakes</span>
+                    </div>
+                    <div class="grammar-index-footer">
+                        <span class="grammar-index-pulse"></span>
+                        LESSON MODE
+                    </div>
+                </aside>
+                <div class="grammar-lesson">
+                    <div class="grammar-lesson-heading">
+                        <div>
+                            <span class="grammar-topic-category">
+                                A1 / VERBS
+                            </span>
+                            <h3>The Verb <em>To Be</em></h3>
+                            <p>
+                                Introduce yourself. Describe people.
+                                Express how you feel.
+                            </p>
+                        </div>
+                        <span class="grammar-topic-symbol"
+                              aria-hidden="true">V.</span>
+                    </div>
+                    <div class="grammar-concept">
+                        <span class="grammar-concept-label">
+                            THE CORE IDEA
+                        </span>
+                        <p>
+                            The verb <strong>to be</strong> helps us
+                            describe identity, feelings and states.
+                            Its form changes depending on the subject.
+                        </p>
+                    </div>
+                    <div class="grammar-sentence-lab">
+                        <div class="grammar-sentence-header">
+                            <span>SENTENCE DECONSTRUCTION</span>
+                            <span class="grammar-sentence-number">EX. 001</span>
+                        </div>
+                        <p class="grammar-sentence">
+                            <span class="grammar-part grammar-part-subject">
+                                <strong>I</strong>
+                                <span>SUBJECT</span>
+                            </span>
+                            <span class="grammar-part grammar-part-verb">
+                                <strong>am</strong>
+                                <span>VERB</span>
+                            </span>
+
+                            <span class="grammar-part grammar-part-complement">
+                                <strong>a student.</strong>
+                                <span>COMPLEMENT</span>
+                            </span>
+                        </p>
+                        <div class="grammar-sentence-legend">
+                            <span class="legend-subject">
+                                <span></span>
+                                WHO?
+                            </span>
+                            <span class="legend-verb">
+                                <span></span>
+                                WHAT CONNECTS?
+                            </span>
+                            <span class="legend-complement">
+                                <span></span>
+                                WHAT INFORMATION?
+                            </span>
+                        </div>
+                    </div>
+                    <div class="grammar-rule">
+                        <div class="grammar-rule-heading">
+                            <span class="grammar-rule-icon">!</span>
+                            <h4>Choose the correct form</h4>
+                        </div>
+                        <div class="grammar-rule-list">
+                            <div class="grammar-rule-row">
+                                <span class="grammar-rule-subject">I</span>
+                                <span class="grammar-rule-equals">→</span>
+                                <strong>AM</strong>
+                                <span class="grammar-rule-example">
+                                    I am ready.
+                                </span>
+                            </div>
+                            <div class="grammar-rule-row">
+                                <span class="grammar-rule-subject">HE / SHE / IT</span>
+                                <span class="grammar-rule-equals">→</span>
+                                <strong>IS</strong>
+                                <span class="grammar-rule-example">
+                                    She is happy.
+                                </span>
+                            </div>
+                            <div class="grammar-rule-row">
+                                <span class="grammar-rule-subject">YOU / WE / THEY</span>
+                                <span class="grammar-rule-equals">→</span>
+                                <strong>ARE</strong>
+                                <span class="grammar-rule-example">
+                                    They are here.
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grammar-examples">
+                        <div class="grammar-examples-heading">
+                            <span class="grammar-section-index">
+                                REAL SENTENCES
+                            </span>
+
+                            <span class="grammar-example-count">
+                                03 EXAMPLES
+                            </span>
+                        </div>
+                        <div class="grammar-example-line">
+                            <span class="grammar-example-marker">A</span>
+                            <p>
+                                <strong>I am</strong> from Ecuador.
+                                <span>Origin</span>
+                            </p>
+                        </div>
+                        <div class="grammar-example-line">
+                            <span class="grammar-example-marker">B</span>
+                            <p>
+                                <strong>He is</strong> tired.
+                                <span>Feeling or state</span>
+                            </p>
+                        </div>
+                        <div class="grammar-example-line">
+                            <span class="grammar-example-marker">C</span>
+                            <p>
+                                <strong>We are</strong> students.
+                                <span>Identity</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="grammar-mistake">
+                        <div class="grammar-mistake-icon"
+                             aria-hidden="true">×</div>
+                        <div>
+                            <span class="grammar-mistake-label">
+                                WATCH OUT
+                            </span>
+                            <p>
+                                <span class="grammar-mistake-wrong">
+                                    She are happy.
+                                </span>
+                                <span class="grammar-mistake-arrow"
+                                      aria-hidden="true">→</span>
+
+                                <strong>She is happy.</strong>
+                            </p>
+                            <span class="grammar-mistake-explanation">
+                                Use IS with he, she and it.
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="grammar-coach"
+                 aria-labelledby="grammar-coach-title">
+            <div class="grammar-coach-character">
+                <img src="/frontend/assets/nino-grammar-page.png"
+                     alt="Nino, your English learning companion">
+            </div>
+
+            <div class="grammar-coach-copy">
+                <span class="grammar-section-index">
+                    NINO'S FIELD NOTES
+                </span>
+                <h2 id="grammar-coach-title">
+                    Don't memorize.
+                    <span>Understand.</span>
+                </h2>
+                <p>
+                    A grammar rule is more than a formula.
+                    Look at the subject, notice the verb and ask
+                    yourself why that form makes sense.
+                </p>
+                <div class="grammar-coach-signature">
+                    <span class="grammar-coach-line"></span>
+                    <span>ONE RULE AT A TIME.</span>
+                </div>
+            </div>
+
+            <div class="grammar-coach-stamp" aria-hidden="true">
+                <span>LEARN</span>
+                <strong>01</strong>
+                <span>REPEAT</span>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-brand">
+            <span>NINO'S</span>
+            <strong>NO EXCUSES.</strong>
+        </div>
+
+        <p>Keep going. You're not completely hopeless.</p>
+
+        <span class="footer-version">
+            ENGLISHLAB / 2026 ·
+            <a href="mi-github">Fernando Barrezueta</a>
+        </span>
+    </footer>
+</body>
+</html>

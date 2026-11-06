@@ -1,0 +1,375 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#110d14">
+    <meta name="description" content="Practice English vocabulary with Nino. Learn new words, understand examples and test your knowledge.">
+    <link rel="stylesheet" href="/frontend/css/style.css">
+    <link rel="stylesheet" href="/frontend/css/vocabulary.css">
+    <title>Vocabulary · Nino's No Excuses</title>
+</head>
+
+<body class="vocabulary-page">
+
+    <div class="ambient-grid" aria-hidden="true"></div>
+    <div class="ambient-glow" aria-hidden="true"></div>
+    <div class="scanlines" aria-hidden="true"></div>
+
+    <header class="site-header">
+        <a href="/frontend/pages/home/index.html" class="brand" aria-label="Nino's No Excuses — Home">
+            <span class="brand-small">NINO'S</span>
+            <span class="brand-main">NO EXCUSES.</span>
+        </a>
+        <nav class="main-nav" aria-label="Main navigation">
+            <a href="/frontend/pages/home/index.html">
+                <span>01</span> HOME
+            </a>
+            <a href="/frontend/pages/practice/index.html" class="active">
+                <span>02</span> PRACTICE
+            </a>
+            <a href="/frontend/pages/progress/index.html">
+                <span>03</span> PROGRESS
+            </a>
+            <a href="/frontend/pages/settings/index.html"
+               class="settings"
+               aria-label="Settings">⚙</a>
+        </nav>
+        <div class="header-account">
+            <div class="player-status">
+                <span class="status-dot"></span>
+                <span class="player-name">PLAYER</span>
+            </div>
+
+            <a href="/frontend/pages/login/index.html"
+            class="login-link">
+                <span class="login-icon">↗</span>
+                LOG IN
+            </a>
+        </div>
+    </header>
+
+    <main id="vocabulary-page">
+
+        <section id="vocabulary-intro" aria-labelledby="vocabulary-title">
+            <div class="intro-text">
+                <span class="section-label">VOCABULARY TRAINING / 01</span>
+                <h1 id="vocabulary-title">
+                    WORDS YOU
+                    <span>SHOULD KNOW.</span>
+                </h1>
+                <p>
+                    Learn the word. Understand the context.
+                    Then prove you actually remember it.
+                </p>
+                <div class="intro-session">
+                    <span class="session-indicator"></span>
+                    ENGLISH TRAINING SESSION
+                </div>
+            </div>
+
+            <div class="intro-nino">
+                <div class="intro-nino-message">
+                    <span class="dialogue-mark" aria-hidden="true">”</span>
+                    <p>Ready? Don't make this harder than it is.</p>
+                </div>
+                <img
+                    src="/frontend/assets/nino-vocabulary-page.png"
+                    alt="Nino, your vocabulary training partner">
+            </div>
+        </section>
+
+        <section id="word-section" aria-labelledby="current-word">
+            <div class="word-scanner">
+                <div class="scanner-top">
+                    <div class="word-counter">
+                        <span class="counter-label">CURRENT WORD</span>
+                        <strong>01 <span>/ 10</span></strong>
+                    </div>
+                    <span class="scanner-status">
+                        <span class="status-dot"></span>
+                        STUDY MODE
+                    </span>
+                </div>
+                <div
+                    class="word-progress"
+                    role="progressbar"
+                    aria-label="Progreso de vocabulario"
+                    aria-valuemin="0"
+                    aria-valuemax="10"
+                    aria-valuenow="1">
+                    <span class="progress-word is-current"
+                          aria-current="step">01</span>
+                    <span class="progress-word">02</span>
+                    <span class="progress-word">03</span>
+                    <span class="progress-word">04</span>
+                    <span class="progress-word">05</span>
+                    <span class="progress-word">06</span>
+                    <span class="progress-word">07</span>
+                    <span class="progress-word">08</span>
+                    <span class="progress-word">09</span>
+                    <span class="progress-word">10</span>
+                </div>
+                <div class="scanner-focus">
+                    <span class="scanner-line line-top"
+                          aria-hidden="true"></span>
+                    <span class="scanner-line line-bottom"
+                          aria-hidden="true"></span>
+                    <span class="scanner-corner corner-tl"
+                          aria-hidden="true"></span>
+                    <span class="scanner-corner corner-tr"
+                          aria-hidden="true"></span>
+                    <span class="scanner-corner corner-bl"
+                          aria-hidden="true"></span>
+                    <span class="scanner-corner corner-br"
+                          aria-hidden="true"></span>
+                    <span class="word-kicker">TODAY'S WORD</span>
+                    <h2 class="word" id="current-word">CURIOUS</h2>
+                    <span class="word-type">ADJECTIVE</span>
+                    <p class="word-pronunciation">
+                        Don't just read it. Learn how it sounds.
+                    </p>
+                </div>
+                <div class="word-audio">
+                    <span class="audio-hint">LISTEN TO THE WORD</span>
+                    <button
+                        class="listen-button"
+                        type="button"
+                        aria-label="Escuchar la pronunciación de curious">
+                        <span aria-hidden="true">♫</span>
+                        LISTEN
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section id="word-context" aria-label="Word meaning and example">
+            <div class="context-explanation">
+                <div class="context-meta">
+                    <span class="context-level">A1 · CORE WORD</span>
+                    <span class="context-label">01 / UNDERSTAND</span>
+                </div>
+                <h2 class="context-heading">WHAT DOES IT MEAN?</h2>
+                <p class="word-definition">
+                    Wanting to know or learn something.
+                </p>
+                <div class="context-divider"></div>
+                <div class="context-example">
+                    <div class="example-heading">
+                        <span class="example-label">SEE IT IN CONTEXT</span>
+                        <span class="example-tag">EXAMPLE 01</span>
+                    </div>
+                    <p>
+                        I'm <strong>curious</strong> about English.
+                    </p>
+                    <p class="example-translation">
+                        Tengo curiosidad por el inglés.
+                    </p>
+                </div>
+            </div>
+
+            <aside class="context-tip" aria-label="Learning tip">
+                <span class="tip-icon" aria-hidden="true">✦</span>
+                <span class="tip-label">NINO'S TIP</span>
+                <p>
+                    When you want to know more about something,
+                    you're <strong>curious</strong>.
+                </p>
+                <span class="tip-footer">UNDERSTAND IT. REMEMBER IT.</span>
+            </aside>
+        </section>
+
+
+        <section id="quick-check" aria-labelledby="check-question">
+            <div class="check-header">
+                <div class="check-heading-group">
+                    <span class="check-label">KNOWLEDGE CHECK / 01</span>
+                    <span class="check-subtitle">Time to prove it.</span>
+                </div>
+                <span class="check-progress">QUESTION 01 / 01</span>
+            </div>
+
+            <h2 id="check-question">
+                What does <strong>“curious”</strong> mean?
+            </h2>
+
+            <p class="check-instruction">
+                Choose the meaning that best matches the word.
+            </p>
+
+            <div class="check-options" role="group" aria-label="Answer options">
+                <button class="check-option" type="button">
+                    <span class="option-number">A</span>
+                    <span class="option-text">Wanting to know something</span>
+                    <span class="option-arrow" aria-hidden="true">↗</span>
+                </button>
+                <button class="check-option" type="button">
+                    <span class="option-number">B</span>
+                    <span class="option-text">Being very tired</span>
+                    <span class="option-arrow" aria-hidden="true">↗</span>
+                </button>
+                <button class="check-option" type="button">
+                    <span class="option-number">C</span>
+                    <span class="option-text">Working very quickly</span>
+                    <span class="option-arrow" aria-hidden="true">↗</span>
+                </button>
+            </div>
+
+            <p class="check-footnote">
+                TAKE YOUR TIME. GUESSING ISN'T A STRATEGY.
+            </p>
+        </section>
+
+
+        <section id="vocabulary-feedback" aria-label="Nino's monitor and session stats">
+
+            <div class="nino-monitor">
+
+                <div class="monitor-header">
+                    <span>NINO MONITOR</span>
+                    <span class="monitor-live">
+                        <span class="status-dot"></span>
+                        LIVE
+                    </span>
+                </div>
+
+                <div class="monitor-screen">
+
+                    <video
+                        class="nino-video"
+                        src="/frontend/assets/nino-vocabulary-idle.mp4"
+                        autoplay
+                        muted
+                        loop
+                        playsinline
+                        aria-label="Nino waiting for your answer"
+                    ></video>
+
+                    <span class="monitor-scanline"
+                          aria-hidden="true"></span>
+
+                </div>
+
+
+                <div class="monitor-message" aria-live="polite">
+                    <span class="message-prefix">NINO ></span>
+                    <p>I'm watching. Make your choice.</p>
+                </div>
+
+            </div>
+
+            <aside class="vocabulary-reward" aria-label="Session progress">
+
+                <span class="reward-heading">YOUR SESSION</span>
+
+                <div class="streak">
+                    <span class="streak-label">CURRENT STREAK</span>
+                    <strong>7<span class="streak-suffix">×</span></strong>
+                    <span class="streak-caption">Keep it going.</span>
+                </div>
+
+                <div class="reward-divider"></div>
+
+                <div class="session-xp">
+                    <span>XP EARNED</span>
+                    <strong>—</strong>
+                </div>
+
+                <p class="reward-note">
+                    Answer to continue your training.
+                </p>
+
+            </aside>
+
+        </section>
+
+        <section
+            id="word-result"
+            aria-label="Answer feedback"
+            aria-live="polite"
+            hidden
+        >
+
+            <div class="result-main">
+
+                <div class="result-status">
+                    <span class="result-icon" aria-hidden="true"></span>
+                    <span class="result-label"></span>
+                </div>
+
+                <p class="result-message"></p>
+
+
+                <p class="result-explanation"></p>
+
+            </div>
+
+            <div class="result-rewards">
+                <div class="result-xp">
+                    <span>XP</span>
+                    <strong></strong>
+                </div>
+
+                <button class="next-word-button" type="button">
+                    NEXT WORD <span aria-hidden="true">→</span>
+                </button>
+            </div>
+
+        </section>
+
+
+        <section id="session-complete" hidden aria-labelledby="complete-title">
+
+            <span class="complete-label">SESSION COMPLETE</span>
+
+            <h2 id="complete-title">VOCABULARY CLEARED.</h2>
+
+            <p class="complete-message">
+                You made it through the session. Let's see how you did.
+            </p>
+
+            <div class="complete-stats">
+
+                <div class="complete-stat">
+                    <span>CORRECT ANSWERS</span>
+                    <strong>— / 10</strong>
+                </div>
+
+                <div class="complete-stat">
+                    <span>XP EARNED</span>
+                    <strong>—</strong>
+                </div>
+
+                <div class="complete-stat">
+                    <span>BEST STREAK</span>
+                    <strong>—</strong>
+                </div>
+
+            </div>
+
+            <button class="continue-button" type="button">
+                CONTINUE <span aria-hidden="true">→</span>
+            </button>
+
+        </section>
+
+    </main>
+
+    <!-- Lógica del quiz de vocabulario -->
+    <script src="/frontend/js/vocabulary.js" defer></script>
+
+    <footer class="site-footer">
+        <div class="footer-brand">
+            <span>NINO'S</span>
+            <strong>NO EXCUSES.</strong>
+        </div>
+        <p>Keep going. You're not completely hopeless.</p>
+        <span class="footer-version">
+            ENGLISHLAB / 2026 ·
+            <a href="mi-github">Fernando Barrezueta</a>
+        </span>
+    </footer>
+
+</body>
+</html>

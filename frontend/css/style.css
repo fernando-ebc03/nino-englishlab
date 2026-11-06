@@ -1,0 +1,717 @@
+
+/* FUENTES Y VARIABLES */
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&family=Press+Start+2P&display=swap');
+:root {
+    /* 1. COLORES BASE, SUPERFICIES Y CANALES RGB (Basados en Nino)*/
+    --primary-rgb: 232 62 140;
+    --primary-dark-rgb: 143 23 79;
+    --text-rgb: 255 244 230;
+    --background-rgb: 17 13 20;
+    --surface-rgb: 27 20 31;
+    /* Colores derivados */
+    --background: rgb(var(--background-rgb));
+    --surface: rgb(var(--surface-rgb));
+    --surface-light: #261b2a;
+    --primary: rgb(var(--primary-rgb));
+    --primary-light: #ff6bab;
+    --primary-dark: rgb(var(--primary-dark-rgb));
+    --text: rgb(var(--text-rgb));
+    --text-muted: #bbaab8;
+    --green-rgb: 145 232 173;
+    --green: rgb(var(--green-rgb));
+    /* 2. PALETAS DE PERSONAJES (escala 50/200/400/600/900) */
+    --nino-50: #FCE8F1;
+    --nino-200: var(--primary-light);
+    --nino-400: var(--primary);
+    --nino-600: #C51E6B;
+    --nino-900: var(--primary-dark);
+    /* Miku — cian/azul */
+    --miku-50: 232 252 255;
+    --miku-200: 168 240 245;
+    --miku-400: 57 214 217;
+    --miku-600: 24 166 181;
+    --miku-900: 23 107 122;
+    --miku-blue: #76C9E8;             
+    --miku-blue-rgb: 118 201 232;  
+    /* Yotsuba — verde */
+    --yotsuba-50: #EAFBEF;
+    --yotsuba-200: #B8E8C8;
+    --yotsuba-400: #91E8AD;
+    --yotsuba-600: #5CBB85;
+    --yotsuba-900: #174D32;
+    --yotsuba-green: var(--yotsuba-400);
+    /* Ichika — amarillo */
+    --ichika-rgb: 242 201 76;      
+    --ichika-50: #FDF6DC;
+    --ichika-200: #F9CD78;
+    --ichika-400: #F2C94C;
+    --ichika-600: #D89F29;
+    --ichika-900: #302516;           
+    --ichika-yellow: var(--ichika-400); 
+    /* Itsuki — rojo */
+    --itsuki-rgb: 230 75 85;
+    --itsuki-50: #FDEAEC;
+    --itsuki-200: #F9B9BF;
+    --itsuki-400: rgb(var(--itsuki-rgb));
+    --itsuki-600: #C33A47;
+    --itsuki-900: #7A2430;
+    --itsuki-red: rgb(var(--itsuki-rgb)); 
+    /* 3. TIPOGRAFÍAS */
+    --font-pixel: 'Press Start 2P', monospace;
+    --font-ui: 'Pixelify Sans', sans-serif;
+    /* 4. SOMBRAS Y EFECTOS COMPARTIDOS */
+    --pixel-shadow: 4px 4px 0 var(--primary-dark);
+    /* 5. BORDES Y OTROS TOKENS GLOBALES */
+    --line: rgb(var(--text-rgb) / 0.12);
+    /* Paneles */
+    --panel: rgb(var(--surface-rgb) / 0.88);
+    --panel-dark: rgb(12 9 16 / 0.82);
+}
+
+
+/*  BASE */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--background);
+    color: var(--text);
+    font-family: var(--font-ui);
+    overflow-x: hidden;
+}
+
+::selection {
+    background: var(--primary);
+    color: var(--background);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font: inherit;
+}
+
+
+/* EFECTO DE FONDO (TODAS LAS PÁGINAS)*/
+.ambient-grid {
+    position: fixed;
+    inset: 0;
+    z-index: -5;
+    opacity: 0.17;
+    background-image:
+        linear-gradient(rgb(255 255 255 / 0.5) 1px, transparent 1px),
+        linear-gradient(90deg, rgb(255 255 255 / 0.5) 1px, transparent 1px);
+    background-size: 45px 45px;
+    mask-image: linear-gradient(to bottom, black, transparent 85%);
+    animation: grid-drift 18s linear infinite;
+}
+
+.ambient-glow {
+    position: fixed;
+    top: 5%;
+    right: -15%;
+    z-index: -4;
+    width: 650px;
+    height: 650px;
+    border-radius: 50%;
+    background: var(--primary-dark);
+    filter: blur(150px);
+    opacity: 0.2;
+    pointer-events: none;
+    animation: glow-pulse 8s ease-in-out infinite;
+}
+
+.scanlines {
+    position: fixed;
+    inset: 0;
+    z-index: 20;
+    pointer-events: none;
+    opacity: 0.05;
+    background: repeating-linear-gradient(
+        to bottom,
+        transparent 0,
+        transparent 3px,
+        #fff 4px
+    );
+}
+
+
+/* COMPONENTES COMPARTIDOS */
+/* Header */
+.site-header {
+    position: relative;
+    z-index: 10;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    min-height: 95px;
+    padding: 0.5vw 4vw;
+    border-bottom: 1px solid var(--line);
+    background: rgb(var(--background-rgb) / 0.78);
+    backdrop-filter: blur(18px);
+}
+
+.brand {
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    line-height: 1;
+}
+
+.brand-small {
+    margin-bottom: 7px;
+    color: var(--primary);
+    font-family: var(--font-pixel);
+    font-size: 0.48rem;
+    letter-spacing: 0.08em;
+}
+
+.brand-main {
+    font-family: var(--font-pixel);
+    font-size: 0.85rem;
+    text-shadow: 3px 3px 0 var(--primary-dark);
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.main-nav a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    padding: 0.8rem 0.9rem;
+    color: var(--text-muted);
+    font-family: var(--font-pixel);
+    font-size: 0.48rem;
+    transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.main-nav a span {
+    color: var(--primary-dark);
+    transition: color 0.25s ease;
+}
+
+.main-nav a::after {
+    content: "";
+    position: absolute;
+    left: 0.9rem;
+    right: 0.9rem;
+    bottom: 4px;
+    height: 2px;
+    background: var(--primary);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.25s ease;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    color: var(--text);
+    transform: translateY(-2px);
+}
+
+.main-nav a:hover span,
+.main-nav a.active span {
+    color: var(--primary);
+}
+
+.main-nav a:hover::after,
+.main-nav a.active::after {
+    transform: scaleX(1);
+}
+
+.main-nav .settings {
+    margin-left: 0.5rem;
+    padding: 0.65rem;
+    border: 1px solid var(--line);
+    font-size: 0.8rem;
+}
+
+.main-nav .settings::after {
+    display: none;
+}
+
+.header-account {
+    justify-self: end;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header-account .player-status {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.header-account .status-dot {
+    display: block;
+    flex: 0 0 7px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--primary);
+    box-shadow: 0 0 12px var(--primary);
+    animation: status-blink 2s ease-in-out infinite;
+}
+
+.login-link {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.7rem 0.8rem;
+    border: 1px solid var(--line);
+    color: var(--text);
+    font-family: var(--font-pixel);
+    font-size: 0.45rem;
+    white-space: nowrap;
+    transition:
+        border-color 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.login-icon {
+    color: var(--primary);
+    font-size: 0.9rem;
+}
+
+.login-link:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 1050px) {
+    .site-header {
+        grid-template-columns: 1fr auto;
+    }
+
+    .main-nav {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        justify-content: center;
+        padding-bottom: 0.8rem;
+    }
+
+    .header-account {
+        grid-column: 2;
+        grid-row: 1;
+    }
+}
+
+@media (max-width: 760px) {
+    .site-header {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 1rem 5vw;
+    }
+
+    .header-account {
+        order: 2;
+        gap: 0.6rem;
+    }
+
+    .header-account .player-status {
+        font-size: 0.38rem;
+    }
+
+    .login-link {
+        padding: 0.6rem;
+        font-size: 0.4rem;
+    }
+
+    .main-nav {
+        order: 3;
+        width: 100%;
+        overflow-x: auto;
+        justify-content: flex-start;
+        padding-bottom: 0.2rem;
+    }
+
+    .main-nav a {
+        flex-shrink: 0;
+        font-size: 0.42rem;
+    }
+}
+
+/* Footer */
+.site-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px 28px;
+    padding: 28px 7vw;
+    border-top: 1px solid var(--line);
+    color: var(--text-muted);
+}
+
+.site-footer h2 {
+    margin: 0;
+    color: var(--text);
+    font-family: var(--font-pixel);
+    font-size: 9px;
+    font-weight: normal;
+    line-height: 1.8;
+}
+
+.site-footer p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.site-footer a {
+    color: var(--primary-light);
+}
+
+.site-footer a:hover {
+    color: var(--text);
+}
+
+@media (max-width: 760px) {
+    .site-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 2.5rem 5vw;
+    }
+
+    .footer-version {
+        align-self: flex-end;
+    }
+}
+
+.section-index {
+    display: block;
+    margin-bottom: 1rem;
+    color: var(--primary-light);
+    font-family: var(--font-pixel);
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+.hero-copy .eyebrow,
+.practice-page .eyebrow,
+.daily-page .eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 1.8rem;
+    color: var(--primary);
+    font-family: var(--font-pixel);
+    font-size: 0.52rem;
+    letter-spacing: 0.08em;
+}
+
+.hero-copy .eyebrow-line,
+.practice-page .eyebrow-line,
+.daily-page .eyebrow-line {
+    width: 42px;
+    height: 2px;
+    background: var(--primary);
+    box-shadow: 0 0 12px rgb(var(--primary-rgb) / 0.7);
+}
+
+.hero-actions .primary-button,
+.progress-page .primary-button {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1.15rem 1.5rem;
+    background: var(--primary);
+    color: var(--background);
+    font-family: var(--font-pixel);
+    font-size: 0.58rem;
+    box-shadow: 6px 6px 0 var(--primary-dark);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.hero-actions .primary-button::before,
+.progress-page .primary-button::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 1px solid rgb(255 255 255 / 0.35);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.hero-actions .primary-button:hover,
+.progress-page .primary-button:hover {
+    background: var(--primary-light);
+    transform: translate(3px, 3px);
+    box-shadow: 3px 3px 0 var(--primary-dark);
+}
+
+.hero-actions .primary-button:hover::before,
+.progress-page .primary-button:hover::before {
+    opacity: 1;
+}
+
+/* Animaciones */
+@keyframes copy-enter {
+    from {
+        opacity: 0;
+        transform: translateX(-45px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes character-enter {
+    from {
+        opacity: 0;
+        transform: translateY(60px) scale(0.96);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes nino-idle {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes speech-float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-6px);
+    }
+}
+
+@keyframes character-glow {
+    0%, 100% {
+        opacity: 0.28;
+        transform: scale(0.95);
+    }
+    50% {
+        opacity: 0.48;
+        transform: scale(1.08);
+    }
+}
+
+@keyframes grid-drift {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(45px);
+    }
+}
+
+@keyframes glow-pulse {
+    0%, 100% {
+        opacity: 0.14;
+    }
+    50% {
+        opacity: 0.24;
+    }
+}
+
+@keyframes background-word {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(25px);
+    }
+}
+
+@keyframes pixel-float {
+    0%, 100% {
+        transform: translate(0, 0);
+        opacity: 0.4;
+    }
+    50% {
+        transform: translate(10px, -18px);
+        opacity: 1;
+    }
+}
+
+@keyframes status-blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.3;
+    }
+}
+
+@keyframes scroll-line {
+    0%, 100% {
+        transform: scaleX(0.5);
+        transform-origin: left;
+    }
+    50% {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes vocabulary-word-enter {
+    from {
+        opacity: 0;
+        transform: translateY(9px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes circle-scan {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes vocabulary-curious {
+    0%, 15%, 100% {
+        transform: rotate(0deg);
+    }
+
+    30% {
+        transform: rotate(-3deg);
+    }
+
+    45% {
+        transform: rotate(-2deg);
+    }
+
+    65% {
+        transform: rotate(1deg);
+    }
+
+    80% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes listening-rhythm {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(-10deg);
+    }
+
+    50% {
+        transform: rotate(0deg);
+    }
+
+    75% {
+        transform: rotate(10deg);
+    }
+}
+
+@keyframes grammar-orbit-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes progress-bar-enter {
+    from {
+        transform: scaleY(0);
+    }
+
+    to {
+        transform: scaleY(1);
+    }
+}
+
+@keyframes stat-entry {
+    from {
+        opacity: 0;
+        transform: translateY(14px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes icon-energy {
+    0%, 100% {
+        filter: drop-shadow(0 0 0 transparent);
+        transform: scale(1.2);
+    }
+
+    50% {
+        filter: drop-shadow(0 0 7px rgb(var(--primary-rgb) / 45%));
+        transform: scale(1.04);
+    }
+}
+
+@keyframes ichika-idle {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-16px) rotate(1deg);
+    }
+}
+
+@keyframes dc-enter {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ACCESIBILIDAD - reducición movimiento */
+@media (prefers-reduced-motion: reduce) {
+    .practice-page *,
+    .practice-page *::before,
+    .practice-page *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .vocabulary-page #vocabulary-intro .intro-nino img,
+    .vocabulary-page .word {
+        animation: none;
+    }
+
+    .vocabulary-page .check-option,
+    .vocabulary-page .next-word-button,
+    .vocabulary-page .continue-button,
+    .vocabulary-page .word-audio .listen-button {
+        transition: none;
+    }
+}

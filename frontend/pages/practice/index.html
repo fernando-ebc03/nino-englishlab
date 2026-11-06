@@ -1,0 +1,258 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/frontend/css/style.css">
+    <link rel="stylesheet" href="/frontend/css/practice.css">
+    <title>Practice — Nino's No Excuses</title>
+</head>
+
+<body class="practice-page">
+
+    <div class="ambient-grid"></div>
+    <div class="ambient-glow"></div>
+    <div class="scanlines"></div>
+
+    <header class="site-header">
+        <a href="/frontend/pages/home/index.html" class="brand">
+            <span class="brand-small">NINO'S</span>
+            <span class="brand-main">NO EXCUSES.</span>
+        </a>
+        <nav class="main-nav">
+            <a href="/frontend/pages/home/index.html">
+                <span>01</span> HOME
+            </a>
+            <a href="/frontend/pages/practice/index.html" class="active">
+                <span>02</span> PRACTICE
+            </a>
+            <a href="/frontend/pages/progress/index.html">
+                <span>03</span> PROGRESS
+            </a>
+            <a href="/frontend/pages/settings/index.html"
+               class="settings"
+               aria-label="Settings">⚙</a>
+        </nav>
+        <div class="header-account">
+            <div class="player-status">
+                <span class="status-dot"></span>
+                <span class="player-name">PLAYER</span>
+            </div>
+
+            <a href="/frontend/pages/login/index.html"
+            class="login-link">
+                <span class="login-icon">↗</span>
+                LOG IN
+            </a>
+        </div>
+    </header>
+
+    <main class="training-room">
+
+        <section class="training-intro">
+            <div class="training-copy">
+                <div class="eyebrow">
+                    <span class="eyebrow-line"></span>
+                    TRAINING ROOM
+                </div>
+
+                <h1>
+                    SO, YOU'RE
+                    <span>BACK.</span>
+                </h1>
+                <p class="training-description">
+                    Three skills. Plenty of mistakes to make.
+                    Try to keep up this time.
+                </p>
+                <a href="/frontend/pages/initial-exam/index.html"
+                   class="exam-cta">
+                    <span class="exam-cta-icon">↗</span>
+                    INITIAL EXAM
+                </a>
+                <div class="training-record">
+                    <div class="record-item">
+                        <img src="/frontend/assets/nino-bow.png"
+                             alt=""
+                             aria-hidden="true">
+                        <div>
+                            <span>STREAK</span>
+                            <strong>07 <small>DAYS</small></strong>
+                        </div>
+                    </div>
+                    <div class="record-divider"></div>
+                    <div class="record-item">
+                        <img src="/frontend/assets/xp-icon.png"
+                             alt=""
+                             aria-hidden="true">
+                        <div>
+                            <span>EXPERIENCE</span>
+                            <strong>420 <small>XP</small></strong>
+                        </div>
+                    </div>
+                    <div class="record-divider"></div>
+                    <div class="record-item">
+                        <img src="/frontend/assets/level-icon.png"
+                             alt=""
+                             aria-hidden="true">
+                        <div>
+                            <span>PLAYER LEVEL</span>
+                            <strong>04</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="instructor-stage">
+                <div class="instructor-topline">
+                    <span>INSTRUCTOR CONNECTED</span>
+                    <span class="instructor-live">
+                        <i></i> ONLINE
+                    </span>
+                </div>
+                <div class="instructor-video">
+                    <video
+                        src="/frontend/assets/nino-dashboard.mp4"
+                        autoplay
+                        loop
+                        muted
+                        playsinline
+                        aria-label="Nino en la sala de entrenamiento">
+                    </video>
+                    <div class="video-corner video-corner-tl"></div>
+                    <div class="video-corner video-corner-br"></div>
+                    <div class="video-caption">
+                        <span>INSTRUCTOR / 01</span>
+                        <span>NO EXCUSES MODE</span>
+                    </div>
+                </div>
+                <div class="instructor-dialogue">
+                    <div class="dialogue-avatar">N</div>
+                    <div class="dialogue-copy">
+                        <span>NINO NAKANO</span>
+                        <p>
+                            Don't tell me you're tired already.
+                            You haven't even started.
+                        </p>
+                    </div>
+                    <span class="dialogue-mark">”</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="daily-mission">
+            <div class="mission-marker">
+                <span>DAILY</span>
+                <strong>MISSION</strong>
+            </div>
+            <div class="mission-copy">
+                <span>YOUR OBJECTIVE</span>
+                <h2>Complete 5 exercises today.</h2>
+            </div>
+            <div class="mission-reward">
+                <span>REWARD</span>
+                <strong>+30 XP</strong>
+            </div>
+            <a href="/frontend/pages/daily-challenge/index.html"
+               class="mission-link"
+               aria-label="Iniciar desafío diario">↗</a>
+        </section>
+
+        <section class="skill-selection">
+            <div class="skill-heading">
+                <div>
+                    <span class="section-index">01 / SELECT YOUR TRAINING</span>
+                    <h2>CHOOSE YOUR <span>SKILL.</span></h2>
+                </div>
+                <p>Pick one. There's no wrong answer.<br>
+                   Well, unless you give up.</p>
+            </div>
+
+            <div class="skill-list">
+                <a href="/frontend/pages/vocabulary/index.html"
+                   class="skill-row skill-vocabulary">
+                    <span class="skill-number">01</span>
+                    <div class="skill-art">
+                        <img src="/frontend/assets/nino-vocabulary.png"
+                             alt="Nino estudiando vocabulario">
+                    </div>
+                    <div class="skill-details">
+                        <span class="skill-category">MEMORY / WORDS</span>
+                        <h3>VOCABULARY</h3>
+                        <p>Learn new words. Remember them for once.</p>
+                    </div>
+                    <div class="skill-progress">
+                        <span>YOUR RECORD</span>
+                        <strong>72<small>%</small></strong>
+                        <div class="progress-track">
+                            <span style="width: 72%"></span>
+                        </div>
+                    </div>
+                    <span class="skill-arrow">↗</span>
+                </a>
+                <a href="/frontend/pages/listening/index.html"
+                   class="skill-row skill-listening">
+                    <span class="skill-number">02</span>
+                    <div class="skill-art">
+                        <img src="/frontend/assets/nino-listening.png"
+                             alt="Nino practicando listening">
+                    </div>
+                    <div class="skill-details">
+                        <span class="skill-category">AUDIO / PERCEPTION</span>
+                        <h3>LISTENING</h3>
+                        <p>They are speaking English. Try to hear it.</p>
+                    </div>
+                    <div class="skill-progress">
+                        <span>YOUR RECORD</span>
+                        <strong>45<small>%</small></strong>
+                        <div class="progress-track">
+                            <span style="width: 45%"></span>
+                        </div>
+                    </div>
+                    <span class="skill-arrow">↗</span>
+                </a>
+                <a href="/frontend/pages/grammar/index.html"
+                   class="skill-row skill-grammar">
+                    <span class="skill-number">03</span>
+                    <div class="skill-art">
+                        <img src="/frontend/assets/nino-grammar.png"
+                             alt="Nino estudiando gramática">
+                    </div>
+                    <div class="skill-details">
+                        <span class="skill-category">STRUCTURE / LOGIC</span>
+                        <h3>GRAMMAR</h3>
+                        <p>Rules exist for a reason. Learn them.</p>
+                    </div>
+                    <div class="skill-progress">
+                        <span>YOUR RECORD</span>
+                        <strong>31<small>%</small></strong>
+                        <div class="progress-track">
+                            <span style="width: 31%"></span>
+                        </div>
+                    </div>
+                    <span class="skill-arrow">↗</span>
+                </a>
+            </div>
+
+            <div class="selection-footer">
+                <span>SELECT A SKILL TO CONTINUE</span>
+                <span>YOUR TRAINING ISN'T GOING TO DO ITSELF.</span>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-brand">
+            <span>NINO'S</span>
+            <strong>NO EXCUSES.</strong>
+        </div>
+        <p>Keep going. You're not completely hopeless.</p>
+        <span class="footer-version">
+            ENGLISHLAB / 2026 ·
+            <a href="mi-github">Fernando Barrezueta</a>
+        </span>
+    </footer>
+
+</body>
+</html>

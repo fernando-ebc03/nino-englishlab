@@ -1,0 +1,454 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#110d14">
+    <meta name="description"content="Entrena tu comprensión auditiva en inglés con EnglishLab.">
+    <title>Listening | Nino's EnglishLab</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="/frontend/css/listening.css">
+</head>
+
+<body class="listening-page">
+
+    <div class="ambient-grid" aria-hidden="true"></div>
+    <div class="ambient-glow" aria-hidden="true"></div>
+    <div class="scanlines" aria-hidden="true"></div>
+
+<header class="site-header">
+    <a href="/frontend/pages/home/index.html" class="brand" aria-label="Nino's No Excuses — Home">
+        <span class="brand-small">NINO'S</span>
+        <span class="brand-main">NO EXCUSES.</span>
+    </a>
+    <nav class="main-nav" aria-label="Main navigation">
+        <a href="/frontend/pages/home/index.html">
+            <span>01</span> HOME
+        </a>
+        <a href="/frontend/pages/practice/index.html" class="active">
+            <span>02</span> PRACTICE
+        </a>
+        <a href="/frontend/pages/progress/index.html">
+            <span>03</span> PROGRESS
+        </a>
+        <a href="/frontend/pages/settings/index.html"
+            class="settings"
+            aria-label="Settings">⚙</a>
+    </nav>
+    <div class="header-account">
+         <div class="player-status">
+            <span class="status-dot"></span>
+            <span class="player-name">PLAYER</span>
+        </div>
+
+        <a href="/frontend/pages/login/index.html"
+            class="login-link">
+            <span class="login-icon">↗</span>
+                LOG IN
+        </a>
+    </div>
+</header>
+
+    <main id="listening-page">
+
+        <section id="listening-intro" aria-labelledby="listening-title">
+            <div class="intro-text">
+                <span class="section-label">LISTENING TRAINING / 02</span>
+
+                <h1 id="listening-title">
+                    CAN YOU
+                    <span>HEAR IT?</span>
+                </h1>
+                <p>
+                    Listen closely. Catch the details.
+                    Understand more than just words.
+                </p>
+                <div class="listening-meta">
+                    <span class="session-indicator" aria-hidden="true"></span>
+                    <span>LISTENING MODULE</span>
+                    <span class="meta-divider" aria-hidden="true">/</span>
+                    <span>MISSION 02</span>
+                </div>
+            </div>
+
+            <div class="intro-nino">
+                <div class="intro-nino-message">
+                    <span class="dialogue-mark" aria-hidden="true">“</span>
+                    <p>
+                        What? You want to understand English
+                        without actually listening to it?
+                    </p>
+                </div>
+                <img
+                    src="../../assets/nino-listening-page.png"
+                    alt="Nino te acompaña en tu entrenamiento de comprensión auditiva">
+            </div>
+        </section>
+
+        <section id="listening-modes" aria-labelledby="modes-title">
+            <div class="listening-section-heading">
+                <div>
+                    <span class="section-label">SELECT YOUR TRAINING</span>
+                    <h2 id="modes-title">CHOOSE YOUR MODE</h2>
+                </div>
+
+                <span class="section-index">01 / 03</span>
+            </div>
+
+            <div class="mode-selector">
+                <article class="mode-option is-selected">
+                    <span class="mode-number">01</span>
+                    <div class="mode-icon" aria-hidden="true">
+                        <span>♪</span>
+                    </div>
+                    <div class="mode-info">
+                        <h3>WORD RADAR</h3>
+                        <p>
+                            Train your ears to recognize
+                            words, sounds and expressions.
+                        </p>
+                    </div>
+                    <span class="mode-tag">VOCABULARY</span>
+                </article>
+
+                <article class="mode-option">
+                    <span class="mode-number">02</span>
+                    <div class="mode-icon" aria-hidden="true">
+                        <span>◖</span>
+                    </div>
+                    <div class="mode-info">
+                        <h3>REAL TALKS</h3>
+                        <p>
+                            Follow conversations and discover
+                            what people really mean.
+                        </p>
+                    </div>
+                    <span class="mode-tag">CONVERSATIONS</span>
+                </article>
+
+                <article class="mode-option">
+                    <span class="mode-number">03</span>
+                    <div class="mode-icon" aria-hidden="true">
+                        <span>⌁</span>
+                    </div>
+                    <div class="mode-info">
+                        <h3>FINAL CHALLENGE</h3>
+                        <p>
+                            Catch the main idea, details
+                            and hidden information.
+                        </p>
+                    </div>
+                    <span class="mode-tag">CHALLENGE</span>
+                </article>
+            </div>
+        </section>
+
+        <section id="listening-station" aria-labelledby="station-title">
+            <div class="listening-section-heading">
+                <div>
+                    <span class="section-label">YOUR CURRENT MISSION</span>
+                    <h2 id="station-title">THE LISTENING STATION</h2>
+                </div>
+
+                <span class="mission-status">
+                    <span class="status-dot" aria-hidden="true"></span>
+                    READY
+                </span>
+            </div>
+
+            <div class="station-layout">
+                <article class="audio-panel">
+                    <div class="audio-panel-top">
+                        <span>NOW LOADING / TRACK_001</span>
+                        <span class="audio-live-indicator">
+                            AUDIO FILE
+                        </span>
+                    </div>
+
+                    <div class="audio-visual">
+                        <div class="audio-artwork" aria-hidden="true">
+                            <span class="artwork-orbit orbit-one"></span>
+                            <span class="artwork-orbit orbit-two"></span>
+
+                            <div class="artwork-core">
+                                <span>♪</span>
+                            </div>
+                        </div>
+                        <div class="audio-track-info">
+                            <span class="track-category">
+                                EVERYDAY ENGLISH
+                            </span>
+                            <h3>A SMALL CONVERSATION</h3>
+
+                            <p>
+                                A short listening session
+                                to warm up your ears.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="audio-waveform" aria-hidden="true">
+                        <span></span><span></span><span></span>
+                        <span></span><span></span><span></span>
+                        <span></span><span></span><span></span>
+                        <span></span><span></span><span></span>
+                        <span></span><span></span><span></span>
+                        <span></span><span></span><span></span>
+                        <span></span><span></span><span></span>
+                        <span></span><span></span><span></span>
+                        <span></span><span></span><span></span>
+                        <span></span><span></span><span></span>
+                        <span></span><span></span><span></span>
+                        <span></span><span></span><span></span>
+                        <span></span><span></span><span></span>
+                        <span></span><span></span><span></span>
+                    </div>
+
+                    <div class="audio-controls">
+                        <span class="audio-time">00:00</span>
+                        <div class="audio-timeline">
+                            <div class="audio-timeline-fill"></div>
+                        </div>
+                        <span class="audio-time">00:45</span>
+                    </div>
+
+                    <div class="audio-actions">
+                        <button
+                            type="button"
+                            class="listen-button"
+                            aria-label="Reproducir audio, próximamente"
+                            disabled>
+                            <span aria-hidden="true">▶</span>
+                            LISTEN
+                        </button>
+                        <span class="replay-hint">
+                            REPLAYS AVAILABLE
+                        </span>
+                    </div>
+
+                    <div class="audio-panel-footer">
+                        <span>ENGLISHLAB AUDIO SYSTEM</span>
+                        <span>PLAYER: INACTIVE</span>
+                    </div>
+                </article>
+
+                <aside class="mission-panel">
+                    <span class="section-label">MISSION BRIEFING</span>
+                    <h3>KEEP YOUR EARS OPEN.</h3>
+                    <p>
+                        You don't need to understand every single
+                        word. Focus on the message and the details
+                        that matter.
+                    </p>
+
+                    <div class="mission-details">
+                        <div class="mission-detail">
+                            <span>ACTIVITY</span>
+                            <strong>Conversation</strong>
+                        </div>
+                        <div class="mission-detail">
+                            <span>ESTIMATED TIME</span>
+                            <strong>3–5 min</strong>
+                        </div>
+                        <div class="mission-detail">
+                            <span>DIFFICULTY</span>
+                            <strong class="difficulty-value">
+                                To be assigned
+                            </strong>
+                        </div>
+                    </div>
+
+                    <div class="mission-tip">
+                        <span class="tip-icon" aria-hidden="true">!</span>
+                        <div>
+                            <strong>NINO'S TIP</strong>
+                            <p>
+                                Listen first. Think second.
+                                Panic never helps.
+                            </p>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <section id="listening-exercise" aria-labelledby="exercise-title">
+            <div class="listening-section-heading">
+                <div>
+                    <span class="section-label">CHECK YOUR UNDERSTANDING</span>
+                    <h2 id="exercise-title">DID YOU GET IT?</h2>
+                </div>
+                <span class="exercise-counter">QUESTION 01</span>
+            </div>
+
+
+            <div class="exercise-panel">
+                <div class="exercise-prompt">
+                    <span class="question-mark" aria-hidden="true">?</span>
+                    <div>
+                        <span class="question-label">YOUR FIRST CHECKPOINT</span>
+                        <h3>
+                            What is the main idea of the conversation?
+                        </h3>
+                        <p>
+                            Listen to the audio and choose the
+                            answer that best matches what you heard.
+                        </p>
+                    </div>
+                </div>
+
+
+                <fieldset class="answer-options">
+                    <legend>SELECT ONE ANSWER</legend>
+
+                    <label class="answer-option">
+                        <input
+                            type="radio"
+                            name="listening-answer"
+                            value="a">
+                        <span class="answer-letter">A</span>
+                        <span class="answer-text">
+                            Two people are planning their weekend.
+                        </span>
+                    </label>
+
+
+                    <label class="answer-option">
+                        <input
+                            type="radio"
+                            name="listening-answer"
+                            value="b">
+                        <span class="answer-letter">B</span>
+                        <span class="answer-text">
+                            Someone is asking for directions.
+                        </span>
+                    </label>
+
+
+                    <label class="answer-option">
+                        <input
+                            type="radio"
+                            name="listening-answer"
+                            value="c">
+                        <span class="answer-letter">C</span>
+                        <span class="answer-text">
+                            Two friends are talking about their studies.
+                        </span>
+                    </label>
+
+                    <label class="answer-option">
+                        <input
+                            type="radio"
+                            name="listening-answer"
+                            value="d">
+                        <span class="answer-letter">D</span>
+                        <span class="answer-text">
+                            Someone is ordering food at a restaurant.
+                        </span>
+                    </label>
+                </fieldset>
+
+                <div
+                    class="listening-feedback"
+                    id="listening-feedback"
+                    aria-live="polite"
+                    hidden>
+                    <span class="feedback-icon" aria-hidden="true">!</span>
+                    <div>
+                        <strong>MISSION FEEDBACK</strong>
+                        <p>
+                            Here you will see whether your answer
+                            was correct and why.
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="exercise-actions">
+                    <p class="exercise-note">
+                        Your answer will be checked in a future update.
+                    </p>
+                    <button
+                        type="button"
+                        class="check-answer-button"
+                        disabled>
+                        CHECK ANSWER
+                        <span aria-hidden="true">→</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section id="listening-progress" aria-labelledby="progress-title">
+            <div class="progress-panel">
+                <div class="progress-copy">
+                    <span class="section-label">SESSION DATA</span>
+                    <h2 id="progress-title">EVERY LISTEN COUNTS.</h2>
+                    <p>
+                        Every activity is another step toward
+                        understanding English with confidence.
+                    </p>
+                </div>
+
+
+                <div class="progress-stats">
+                    <div class="progress-stat">
+                        <span class="stat-icon" aria-hidden="true">◈</span>
+                        <span class="stat-value">--</span>
+                        <span class="stat-label">XP EARNED</span>
+                    </div>
+
+                    <div class="progress-stat">
+                        <span class="stat-icon" aria-hidden="true">▤</span>
+                        <span class="stat-value">--</span>
+                        <span class="stat-label">COMPLETED</span>
+                    </div>
+
+                    <div class="progress-stat">
+                        <span class="stat-icon" aria-hidden="true">◎</span>
+                        <span class="stat-value">--</span>
+                        <span class="stat-label">ACCURACY</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="listening-next-step" aria-labelledby="next-step-title">
+            <div class="next-step-content">
+                <span class="section-label">END OF TRANSMISSION</span>
+                <h2 id="next-step-title">
+                    READY FOR
+                    <span>ANOTHER ROUND?</span>
+                </h2>
+                <p>
+                    Keep training. The more you listen,
+                    the more you understand.
+                </p>
+                <a href="/frontend/pages/practice/index.html" class="back-to-practice">
+                    BACK TO PRACTICE
+                    <span aria-hidden="true">→</span>
+                </a>
+            </div>
+
+            <div class="next-step-decoration" aria-hidden="true">
+                <span>LISTEN</span>
+                <span>LEARN</span>
+                <span>REPEAT</span>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-brand">
+            <span>NINO'S</span>
+            <strong>NO EXCUSES.</strong>
+        </div>
+        <p>Keep going. You're not completely hopeless.</p>
+        <span class="footer-version">
+            ENGLISHLAB / 2026 ·
+            <a href="mi-github">Fernando Barrezueta</a>
+        </span>
+    </footer>
+</body>
+</html>

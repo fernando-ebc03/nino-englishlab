@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Personaliza tu experiencia de aprendizaje en EnglishLab."
+    >
+
+    <title>Configuración | EnglishLab</title>
+
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/settings.css">
+</head>
+
+<body class="settings-page">
+
+    <div class="ambient-grid" aria-hidden="true"></div>
+    <div class="ambient-glow" aria-hidden="true"></div>
+    <div class="scanlines" aria-hidden="true"></div>
+
+    <!-- HEADER -->
+     <header class="site-header">
+        <a href="/frontend/pages/home/index.html" class="brand">
+            <span class="brand-small">NINO'S</span>
+            <span class="brand-main">NO EXCUSES.</span>
+        </a>
+
+        <nav class="main-nav">
+            <a href="/frontend/pages/home/index.html">
+                <span>01</span> HOME
+            </a>
+            <a href="/frontend/pages/practice/index.html">
+                <span>02</span> PRACTICE
+            </a>
+            <a href="/frontend/pages/progress/index.html">
+                <span>03</span> PROGRESS
+            </a>
+            <a href="/frontend/pages/settings/index.html"
+               class="settings"
+               aria-label="Settings">⚙</a>
+        </nav>
+
+        <div class="header-account">
+            <div class="player-status">
+                <span class="status-dot"></span>
+                <span class="player-name">PLAYER</span>
+            </div>
+
+            <a href="/frontend/pages/login/index.html"
+            class="login-link">
+                <span class="login-icon">↗</span>
+                LOG IN
+            </a>
+        </div>
+    </header>
+
+    <main class="settings-main">
+
+        <!-- PAGE INTRO -->
+        <section class="settings-intro">
+            <div class="intro-eyebrow">
+                <span class="eyebrow-line"></span>
+                PERSONAL SPACE / 004
+            </div>
+
+            <h1>
+                YOUR <span class="title-period">SPACE.</span>
+            </h1>
+
+            <p>
+                Ajusta tu experiencia. Haz que EnglishLab se sienta tuyo.
+            </p>
+        </section>
+
+        <!-- CHARACTER SCENE -->
+        <section
+            class="character-scene"
+            aria-label="Nino y Yotsuba te acompañan en la configuración"
+        >
+            <div class="scene-grid" aria-hidden="true"></div>
+
+            <div class="scene-orbit scene-orbit-one" aria-hidden="true"></div>
+            <div class="scene-orbit scene-orbit-two" aria-hidden="true"></div>
+
+            <span class="scene-coordinate coordinate-top">
+                EL // PERSONALIZATION
+            </span>
+
+            <span class="scene-coordinate coordinate-bottom">
+                NO EXCUSES. JUST PROGRESS.
+            </span>
+
+            <div class="scene-side-label scene-label-left" aria-hidden="true">
+                <span class="scene-label-index">01</span>
+                <span>ENERGY</span>
+                <span class="scene-label-color green-label"></span>
+            </div>
+
+            <div class="scene-side-label scene-label-right" aria-hidden="true">
+                <span class="scene-label-index">02</span>
+                <span>ATTITUDE</span>
+                <span class="scene-label-color pink-label"></span>
+            </div>
+
+            <div class="scene-art">
+                <div class="character-halo halo-yotsuba" aria-hidden="true"></div>
+                <div class="character-halo halo-nino" aria-hidden="true"></div>
+
+                <div class="scene-pixels pixels-green" aria-hidden="true">
+                    <i></i><i></i><i></i><i></i><i></i>
+                </div>
+
+                <div class="scene-pixels pixels-pink" aria-hidden="true">
+                    <i></i><i></i><i></i><i></i><i></i>
+                </div>
+
+                <img
+                    class="scene-character scene-yotsuba"
+                    src="../../assets/yotsuba-settings.png"
+                    alt="Yotsuba Nakano"
+                >
+
+                <img
+                    class="scene-character scene-nino"
+                    src="../../assets/nino-settings.png"
+                    alt="Nino Nakano"
+                >
+
+                <div class="scene-name nameplate-yotsuba">
+                    <span class="nameplate-dot"></span>
+                    <span>YOTSUBA</span>
+                    <small>ENERGY +</small>
+                </div>
+
+                <div class="scene-name nameplate-nino">
+                    <span class="nameplate-dot"></span>
+                    <span>NINO</span>
+                    <small>STYLE +</small>
+                </div>
+            </div>
+
+            <div class="scene-message">
+                <span class="message-avatar" aria-hidden="true">N!</span>
+
+                <div class="message-copy">
+                    <span class="message-heading">A LITTLE REMINDER</span>
+                    <p>
+                        Your space, your rules. Keep learning at your own pace.
+                    </p>
+                </div>
+
+                <span class="message-decoration" aria-hidden="true">✦</span>
+            </div>
+        </section>
+
+        <!-- SETTINGS SECTION HEADING -->
+        <div class="settings-section-heading">
+            <div>
+                <span class="section-kicker">CONTROL CENTER</span>
+                <h2>Make it yours<span>.</span></h2>
+            </div>
+
+            <span class="section-counter">01 — 04</span>
+        </div>
+
+        <form class="settings-form" id="settings-form">
+
+            <!-- PROFILE -->
+            <section class="config-panel profile-panel">
+                <div class="panel-heading">
+                    <span class="panel-index">01</span>
+
+                    <div>
+                        <h3>Tu perfil</h3>
+                        <p>Tu identidad dentro de EnglishLab.</p>
+                    </div>
+
+                    <span class="panel-symbol" aria-hidden="true">◈</span>
+                </div>
+
+                <div class="panel-content profile-fields">
+                    <label class="field-group">
+                        <span class="field-label">Nombre de usuario</span>
+
+                        <input
+                            type="text"
+                            name="username"
+                            placeholder="Tu nombre"
+                            autocomplete="nickname"
+                        >
+                    </label>
+
+                    <label class="field-group">
+                        <span class="field-label">Correo electrónico</span>
+
+                        <input
+                            type="email"
+                            name="email"
+                            placeholder="tu@correo.com"
+                            autocomplete="email"
+                        >
+                    </label>
+                </div>
+            </section>
+
+            <!-- APPEARANCE -->
+            <section class="config-panel appearance-panel">
+                <div class="panel-heading">
+                    <span class="panel-index">02</span>
+
+                    <div>
+                        <h3>Apariencia</h3>
+                        <p>El ambiente en el que vas a aprender.</p>
+                    </div>
+
+                    <span class="panel-symbol" aria-hidden="true">◐</span>
+                </div>
+
+                <div class="panel-content">
+                    <div class="setting-row">
+                        <div class="setting-description">
+                            <strong>Tema visual</strong>
+                            <span>Elige el estilo de tu espacio.</span>
+                        </div>
+
+                        <label class="select-control">
+                            <span class="visually-hidden">Tema visual</span>
+
+                            <select name="theme">
+                                <option value="dark" selected>Dark pixel</option>
+                                <option value="system">Sistema</option>
+                                <option value="light">Claro</option>
+                            </select>
+                        </label>
+                    </div>
+
+                    <div class="setting-row">
+                        <div class="setting-description">
+                            <strong>Animaciones</strong>
+                            <span>Efectos visuales de la interfaz.</span>
+                        </div>
+
+                        <label class="switch">
+                            <input
+                                type="checkbox"
+                                name="animations"
+                                checked
+                            >
+                            <span class="switch-track"></span>
+                            <span class="visually-hidden">
+                                Activar animaciones
+                            </span>
+                        </label>
+                    </div>
+                </div>
+            </section>
+
+            <!-- EXPERIENCE -->
+            <section class="config-panel experience-panel">
+                <div class="panel-heading">
+                    <span class="panel-index">03</span>
+
+                    <div>
+                        <h3>Experiencia</h3>
+                        <p>Los detalles que acompañan tu progreso.</p>
+                    </div>
+
+                    <span class="panel-symbol" aria-hidden="true">✦</span>
+                </div>
+
+                <div class="panel-content">
+                    <div class="setting-row">
+                        <div class="setting-description">
+                            <strong>Efectos de sonido</strong>
+                            <span>Sonidos de las interacciones.</span>
+                        </div>
+
+                        <label class="switch">
+                            <input
+                                type="checkbox"
+                                name="sound"
+                                checked
+                            >
+                            <span class="switch-track"></span>
+                            <span class="visually-hidden">
+                                Activar efectos de sonido
+                            </span>
+                        </label>
+                    </div>
+
+                    <div class="setting-row">
+                        <div class="setting-description">
+                            <strong>Recordatorios</strong>
+                            <span>Recordatorios para mantener la práctica.</span>
+                        </div>
+
+                        <label class="switch">
+                            <input
+                                type="checkbox"
+                                name="reminders"
+                            >
+                            <span class="switch-track"></span>
+                            <span class="visually-hidden">
+                                Activar recordatorios
+                            </span>
+                        </label>
+                    </div>
+                </div>
+            </section>
+
+            <!-- LEARNING PREFERENCES -->
+            <section class="config-panel learning-panel">
+                <div class="panel-heading">
+                    <span class="panel-index">04</span>
+
+                    <div>
+                        <h3>Aprendizaje</h3>
+                        <p>Adapta la práctica a tus preferencias.</p>
+                    </div>
+
+                    <span class="panel-symbol" aria-hidden="true">⌁</span>
+                </div>
+
+                <div class="panel-content">
+                    <div class="setting-row">
+                        <div class="setting-description">
+                            <strong>Nivel de inglés</strong>
+                            <span>Tu nivel de referencia.</span>
+                        </div>
+
+                        <label class="select-control">
+                            <span class="visually-hidden">Nivel de inglés</span>
+
+                            <select name="english-level">
+                                <option value="A1">A1 · Beginner</option>
+                                <option value="A2">A2 · Elementary</option>
+                                <option value="B1" selected>B1 · Intermediate</option>
+                                <option value="B2">B2 · Upper intermediate</option>
+                                <option value="C1">C1 · Advanced</option>
+                            </select>
+                        </label>
+                    </div>
+
+                    <div class="setting-row">
+                        <div class="setting-description">
+                            <strong>Práctica diaria</strong>
+                            <span>Tiempo que quieres dedicar cada día.</span>
+                        </div>
+
+                        <label class="select-control">
+                            <span class="visually-hidden">
+                                Tiempo de práctica diaria
+                            </span>
+
+                            <select name="daily-practice">
+                                <option value="5">5 minutos</option>
+                                <option value="10" selected>10 minutos</option>
+                                <option value="15">15 minutos</option>
+                                <option value="20">20 minutos</option>
+                                <option value="30">30 minutos</option>
+                            </select>
+                        </label>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ACTIONS -->
+            <div class="settings-actions">
+                <p class="actions-note">
+                    <span class="status-dot"></span>
+                    Tus preferencias se gestionan aquí.
+                </p>
+
+                <div class="actions-buttons">
+                    <button
+                        class="button-reset"
+                        type="reset"
+                    >
+                        RESTABLECER
+                    </button>
+
+                    <button
+                        class="button-save"
+                        type="submit"
+                    >
+                        GUARDAR CAMBIOS
+                        <span aria-hidden="true">↗</span>
+                    </button>
+                </div>
+            </div>
+
+        </form>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-brand">
+            <span>NINO'S</span>
+            <strong>NO EXCUSES.</strong>
+        </div>
+
+        <p>Keep going. You're not completely hopeless.</p>
+
+        <span class="footer-version">
+            ENGLISHLAB / 2026 ·
+            <a href="mi-github">Fernando Barrezueta</a>
+        </span>
+    </footer>
+
+</body>
+</html>

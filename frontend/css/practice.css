@@ -1,0 +1,704 @@
+/* 6. PÁGINA: PRÁCTICA */
+
+.training-room {
+    width: min(1380px, 90%);
+    margin: 0 auto;
+    padding: 55px 0 90px;
+}
+
+/* Práctica: intro */
+.training-intro {
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
+    gap: 65px;
+    align-items: center;
+    min-height: 460px;
+}
+
+.training-copy {
+    position: relative;
+    z-index: 1;
+    animation: copy-enter 0.8s ease both;
+}
+
+.training-copy h1 {
+    margin: 25px 0;
+    font-family: var(--font-pixel);
+    font-size: clamp(2.1rem, 4.2vw, 4.4rem);
+    line-height: 1.45;
+    letter-spacing: -3px;
+}
+
+.training-copy h1 span {
+    display: block;
+    color: var(--primary);
+}
+
+.training-description {
+    max-width: 390px;
+    color: var(--text-muted);
+    font-size: 1.15rem;
+    line-height: 1.8;
+}
+
+.exam-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 28px;
+    padding: 0.9rem 1.3rem;
+    background: var(--primary);
+    color: var(--background);
+    font-family: var(--font-pixel);
+    font-size: 0.55rem;
+    letter-spacing: 1px;
+    box-shadow: 4px 4px 0 var(--primary-dark);
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.25s ease;
+}
+
+.exam-cta:hover {
+    background: var(--miku-blue);
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 rgb(var(--miku-900));
+}
+
+.exam-cta:active {
+    transform: translate(2px, 2px);
+    box-shadow: 1px 1px 0 var(--primary-dark);
+}
+
+.exam-cta:focus-visible {
+    outline: 3px dashed var(--primary-light);
+    outline-offset: 4px;
+}
+
+.exam-cta-icon {
+    font-size: 0.7rem;
+}
+
+.training-record {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-top: 48px;
+    padding-top: 22px;
+    border-top: 1px solid var(--line);
+}
+
+.record-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.record-item img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+.record-item div {
+    display: grid;
+    gap: 6px;
+}
+
+/* Comparten la misma base. */
+.record-item div > span,
+.mission-marker,
+.mission-copy > span,
+.mission-reward > span,
+.skill-category,
+.skill-progress > span,
+.instructor-topline,
+.video-caption,
+.selection-footer {
+    font-family: var(--font-pixel);
+    font-size: 8px;
+    letter-spacing: 1px;
+}
+
+.record-item div > span {
+    color: var(--text-muted);
+    font-size: 7px;
+}
+
+.record-item strong {
+    font-family: var(--font-ui);
+    font-size: 1.4rem;
+}
+
+.record-item strong small {
+    color: var(--primary-light);
+    font-size: 0.75rem;
+}
+
+.record-divider {
+    width: 1px;
+    height: 32px;
+    background: var(--line);
+}
+
+/* Práctica: instructor (video) */
+.instructor-stage {
+    position: relative;
+    width: 85%;
+    max-width: 400px;
+    margin-inline: auto;
+    padding: 18px;
+    border: 1px solid rgb(var(--primary-rgb) / 0.28);
+    background: linear-gradient(145deg, rgb(38 27 42 / 0.92), rgb(var(--background-rgb) / 0.8));
+    box-shadow: 0 25px 80px rgb(0 0 0 / 0.2);
+    animation: character-enter 0.9s ease both;
+}
+
+.instructor-topline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 2px 0 16px;
+    color: var(--text-muted);
+    font-size: 7px;
+}
+
+.instructor-live {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: var(--primary-light);
+}
+
+.instructor-live i {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--primary);
+    animation: status-blink 2s infinite;
+}
+
+.instructor-video {
+    position: relative;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    background: #0c0910;
+}
+
+.instructor-video video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-corner {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    pointer-events: none;
+}
+
+.video-corner-tl {
+    top: 10px;
+    left: 10px;
+    border-top: 2px solid var(--primary);
+    border-left: 2px solid var(--primary);
+}
+
+.video-corner-br {
+    right: 10px;
+    bottom: 10px;
+    border-right: 2px solid var(--primary);
+    border-bottom: 2px solid var(--primary);
+}
+
+.video-caption {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 28px 14px 12px;
+    color: var(--text);
+    font-size: 7px;
+    background: linear-gradient(transparent, rgb(10 7 12 / 0.9));
+}
+
+.instructor-dialogue {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 18px 2px 2px;
+}
+
+.dialogue-avatar {
+    display: grid;
+    flex-shrink: 0;
+    place-items: center;
+    width: 38px;
+    height: 38px;
+    color: var(--text);
+    font-family: var(--font-pixel);
+    font-size: 14px;
+    background: var(--primary-dark);
+    border: 1px solid var(--primary);
+}
+
+.dialogue-copy {
+    flex: 1;
+}
+
+.dialogue-copy > span {
+    color: var(--primary-light);
+    font-family: var(--font-pixel);
+    font-size: 8px;
+}
+
+.dialogue-copy p {
+    margin-top: 7px;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.dialogue-mark {
+    align-self: flex-start;
+    color: var(--primary);
+    font-family: Georgia, serif;
+    font-size: 3rem;
+    line-height: 1;
+    opacity: 0.6;
+}
+
+/* Práctica: misión diaria */
+.daily-mission {
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+    align-items: center;
+    gap: 25px;
+    margin: 45px 0 85px;
+    padding: 22px 25px;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    background: linear-gradient(90deg, rgb(var(--primary-rgb) / 0.05), transparent 75%);
+}
+
+.mission-marker {
+    display: grid;
+    gap: 7px;
+    padding-right: 24px;
+    border-right: 1px solid var(--line);
+}
+
+.mission-marker span,
+.mission-copy > span,
+.mission-reward > span {
+    color: var(--text-muted);
+}
+
+.mission-marker strong {
+    color: var(--primary-light);
+}
+
+.mission-copy h2 {
+    margin-top: 8px;
+    font-family: var(--font-ui);
+    font-size: 1.35rem;
+}
+
+.mission-reward {
+    display: grid;
+    gap: 8px;
+    text-align: right;
+}
+
+.mission-reward strong {
+    color: var(--primary-light);
+    font-family: var(--font-pixel);
+    font-size: 12px;
+}
+
+.mission-link {
+    display: grid;
+    place-items: center;
+    width: 46px;
+    height: 46px;
+    color: var(--text);
+    font-size: 1.5rem;
+    border: 1px solid var(--primary);
+    transition: color 0.25s, background 0.25s, transform 0.25s;
+}
+
+.mission-link:hover {
+    color: #fff;
+    background: var(--primary-dark);
+    transform: translate(3px, -3px);
+}
+
+/* Práctica: lista de habilidades */
+.skill-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.skill-heading h2 {
+    margin-top: 20px;
+    font-family: var(--font-pixel);
+    font-size: clamp(1.3rem, 2.5vw, 2.2rem);
+    line-height: 1.7;
+}
+
+.skill-heading h2 span {
+    color: var(--primary);
+}
+
+.skill-heading > p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    text-align: right;
+}
+
+.skill-list {
+    border-top: 1px solid var(--line);
+}
+
+.skill-row {
+    position: relative;
+    display: grid;
+    grid-template-columns: 45px 145px minmax(0, 1fr) 125px 28px;
+    align-items: center;
+    gap: 25px;
+    min-height: 175px;
+    padding: 20px 18px;
+    overflow: hidden;
+    border-bottom: 1px solid var(--line);
+    transition: background 0.3s, padding 0.3s;
+}
+
+.skill-row::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background: linear-gradient(90deg, rgb(var(--primary-rgb) / 0.12), transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+}
+
+.skill-row:hover {
+    padding-right: 12px;
+    padding-left: 25px;
+}
+
+.skill-row:hover::before {
+    opacity: 1;
+}
+
+.skill-number,
+.skill-art,
+.skill-details,
+.skill-progress,
+.skill-arrow {
+    position: relative;
+    z-index: 1;
+}
+
+.skill-number {
+    align-self: start;
+    padding-top: 15px;
+    color: var(--text-muted);
+    font-family: var(--font-pixel);
+    font-size: 10px;
+}
+
+.skill-art {
+    display: grid;
+    place-items: center;
+    align-self: stretch;
+    min-height: 130px;
+    overflow: hidden;
+    background: radial-gradient(ellipse, rgb(var(--primary-rgb) / 0.17), transparent 72%);
+}
+
+.skill-art img {
+    display: block;
+    width: 100%;
+    height: 145px;
+    object-fit: contain;
+    transition: transform 0.4s;
+}
+
+.skill-row:hover .skill-art img {
+    transform: scale(1.08) translateY(-3px);
+}
+
+.skill-category {
+    color: var(--primary-light);
+    font-size: 7px;
+}
+
+.skill-details h3 {
+    margin: 12px 0 8px;
+    font-family: var(--font-pixel);
+    font-size: clamp(12px, 1.4vw, 17px);
+    line-height: 1.7;
+}
+
+.skill-details p {
+    max-width: 400px;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+.skill-progress {
+    display: grid;
+    gap: 10px;
+}
+
+.skill-progress > span {
+    color: var(--text-muted);
+    font-size: 7px;
+}
+
+.skill-progress strong {
+    font-family: var(--font-ui);
+    font-size: 1.7rem;
+}
+
+.skill-progress strong small {
+    color: var(--primary-light);
+    font-size: 0.9rem;
+}
+
+.progress-track {
+    height: 3px;
+    overflow: hidden;
+    background: var(--line);
+}
+
+.progress-track span {
+    display: block;
+    height: 100%;
+    background: var(--primary);
+}
+
+.skill-arrow {
+    justify-self: end;
+    color: var(--text-muted);
+    font-size: 1.4rem;
+    transition: color 0.25s, transform 0.25s;
+}
+
+.skill-row:hover .skill-arrow {
+    color: var(--primary-light);
+    transform: translate(3px, -3px);
+}
+
+.selection-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding-top: 20px;
+    color: var(--text-muted);
+    font-size: 7px;
+    line-height: 1.8;
+}
+
+/* Práctica: responsive */
+@media (max-width: 1000px) {
+    .training-intro {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+
+    .training-record {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .record-divider {
+        display: none;
+    }
+
+    .skill-row {
+        grid-template-columns: 30px 115px minmax(0, 1fr) 95px 20px;
+        gap: 16px;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+}
+
+@media (max-width: 700px) {
+    .training-room {
+        width: 90%;
+        padding-top: 35px;
+    }
+
+    .training-intro {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .training-copy h1 {
+        font-size: clamp(2rem, 9vw, 3.2rem);
+        letter-spacing: -1px;
+    }
+
+    .training-record {
+        justify-content: space-between;
+        gap: 10px;
+        margin-top: 30px;
+    }
+
+    .record-item {
+        gap: 7px;
+    }
+
+    .record-item img {
+        width: 23px;
+        height: 23px;
+    }
+
+    .record-item strong {
+        font-size: 1.15rem;
+    }
+
+    .record-item div > span {
+        font-size: 6px;
+    }
+
+    .instructor-stage {
+        padding: 12px;
+    }
+
+    .daily-mission {
+        grid-template-columns: auto 1fr auto;
+        gap: 15px;
+        margin: 45px 0 60px;
+        padding: 20px 0;
+    }
+
+    .mission-marker {
+        padding-right: 12px;
+    }
+
+    .mission-copy h2 {
+        font-size: 1.1rem;
+    }
+
+    .mission-reward {
+        grid-column: 2;
+        text-align: left;
+    }
+
+    .mission-link {
+        grid-column: 3;
+        grid-row: 1 / span 2;
+    }
+
+    .skill-heading {
+        display: block;
+    }
+
+    .skill-heading > p {
+        margin-top: 12px;
+        text-align: left;
+    }
+
+    .skill-row {
+        grid-template-columns: 25px 85px minmax(0, 1fr) 20px;
+        gap: 12px;
+        min-height: 135px;
+        padding: 15px 5px;
+    }
+
+    .skill-art {
+        min-height: 100px;
+    }
+
+    .skill-art img {
+        height: 105px;
+    }
+
+    .skill-details h3 {
+        margin: 8px 0 5px;
+        font-size: 11px;
+    }
+
+    .skill-details p {
+        font-size: 0.85rem;
+    }
+
+    .skill-category {
+        font-size: 6px;
+        line-height: 1.8;
+    }
+
+    .skill-progress {
+        grid-column: 3;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 5px;
+    }
+
+    .skill-progress > span {
+        display: none;
+    }
+
+    .skill-progress strong {
+        flex-shrink: 0;
+        font-size: 1.1rem;
+    }
+
+    .progress-track {
+        flex: 1;
+    }
+
+    .skill-arrow {
+        grid-column: 4;
+        grid-row: 1;
+    }
+
+    .selection-footer {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+
+@media (max-width: 400px) {
+    .skill-row {
+        grid-template-columns: 20px 65px minmax(0, 1fr) 16px;
+        gap: 8px;
+    }
+
+    .skill-art img {
+        height: 90px;
+    }
+
+    .skill-details h3 {
+        font-size: 9px;
+    }
+
+    .skill-details p {
+        font-size: 0.78rem;
+    }
+
+    .mission-marker {
+        font-size: 7px;
+    }
+
+    .video-caption {
+        font-size: 6px;
+    }
+}

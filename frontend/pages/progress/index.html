@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/frontend/css/style.css">
+    <link rel="stylesheet" href="/frontend/css/progress.css">
+    <title>PROGRESS — EnglishLab</title>
+</head>
+<body>
+    <div class="ambient-grid"></div>
+    <div class="ambient-glow"></div>
+    <div class="scanlines"></div>
+
+    <header class="site-header">
+        <a href="/frontend/pages/home/index.html" class="brand">
+            <span class="brand-small">NINO'S</span>
+            <span class="brand-main">NO EXCUSES.</span>
+        </a>
+
+        <nav class="main-nav">
+            <a href="/frontend/pages/home/index.html">
+                <span>01</span> HOME
+            </a>
+            <a href="/frontend/pages/practice/index.html">
+                <span>02</span> PRACTICE
+            </a>
+            <a href="/frontend/pages/progress/index.html" class="active">
+                <span>03</span> PROGRESS
+            </a>
+            <a href="/frontend/pages/settings/index.html"
+               class="settings"
+               aria-label="Settings">⚙</a>
+        </nav>
+
+        <div class="header-account">
+            <div class="player-status">
+                <span class="status-dot"></span>
+                <span class="player-name">PLAYER</span>
+            </div>
+
+            <a href="/frontend/pages/login/index.html"
+            class="login-link">
+                <span class="login-icon">↗</span>
+                LOG IN
+            </a>
+        </div>
+    </header>
+
+    <main class="progress-page">
+
+        <section class="progress-heading">
+            <div>
+                <span class="eyebrow">
+                    <span class="eyebrow-line"></span>
+                    YOUR LEARNING RECORD
+                </span>
+                <h1>YOUR <span>PROGRESS.</span></h1>
+                <p>Every session counts. Here's how you're doing.</p>
+            </div>
+
+            <div class="progress-period">
+                <span class="period-label">CURRENT VIEW</span>
+                <strong>THIS WEEK <span>↘</span></strong>
+                <small>DEMO DATA · NOT REAL RESULTS</small>
+            </div>
+        </section>
+
+        <section class="progress-overview" aria-label="Resumen de progreso">
+            <article class="overview-item overview-time">
+                <span class="overview-label">STUDY TIME</span>
+                <div class="overview-value">
+                    <strong>04<span>h</span> 20<span>m</span></strong>
+                </div>
+                <span class="overview-detail">TOTAL TIME PRACTICED</span>
+                <span class="overview-symbol" aria-hidden="true">◷</span>
+            </article>
+
+            <article class="overview-item overview-sessions">
+                <span class="overview-label">SESSIONS</span>
+                <div class="overview-value">
+                    <strong>12</strong>
+                </div>
+                <span class="overview-detail">COMPLETED SESSIONS</span>
+                <span class="overview-symbol" aria-hidden="true">▤</span>
+            </article>
+
+            <article class="overview-item overview-streak">
+                <span class="overview-label">STUDY STREAK</span>
+                <div class="overview-value">
+                    <strong>05 <span>DAYS</span></strong>
+                </div>
+                <span class="overview-detail">CONSECUTIVE DAYS</span>
+                <span class="overview-symbol" aria-hidden="true">✦</span>
+            </article>
+        </section>
+
+        <section class="nino-checkin" aria-label="Nino's progress check-in">
+            <div class="nino-checkin-character">
+                <img
+                    src="/frontend/assets/nino-progreso.png"
+                    alt="Nino Nakano"
+                    loading="lazy">
+            </div>
+
+            <div class="nino-checkin-copy">
+                <span class="nino-checkin-label">
+                    <span class="status-dot"></span>
+                    NINO'S CHECK-IN / 001
+                </span>
+
+                <h2>NOT BAD.<br><span>DON'T GET COCKY.</span></h2>
+
+                <p>
+                    You're putting in the work. That's a start.
+                    Now make sure you actually remember what you're learning.
+                </p>
+            </div>
+
+            <div class="nino-checkin-stamp" aria-hidden="true">
+                <span>PLAYER</span>
+                <strong>01</strong>
+                <span>UNDER REVIEW</span>
+            </div>
+        </section>
+
+        <section class="activity-section">
+            <div class="section-heading">
+                <div>
+                    <span class="section-index">01 / CONSISTENCY</span>
+                    <h2>YOUR WEEK IN <span>REVIEW.</span></h2>
+                </div>
+                <span class="demo-tag">EXAMPLE CHART</span>
+            </div>
+
+            <div class="activity-panel">
+                <div class="activity-summary">
+                    <div>
+                        <span class="chart-label">PRACTICE ACTIVITY</span>
+                        <strong>12 <span>SESSIONS</span></strong>
+                    </div>
+                    <p>Small steps add up. Keep showing up.</p>
+                </div>
+
+                <div class="weekly-chart"
+                     role="img"
+                     aria-label="Gráfico de ejemplo con actividad de lunes a domingo">
+                    <div class="chart-grid" aria-hidden="true">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <div class="chart-days">
+                        <div class="chart-day">
+                            <span class="day-value">2</span>
+                            <div class="day-track">
+                                <span class="day-bar" style="--bar-height: 45%"></span>
+                            </div>
+                            <span class="day-name">MON</span>
+                        </div>
+
+                        <div class="chart-day">
+                            <span class="day-value">3</span>
+                            <div class="day-track">
+                                <span class="day-bar" style="--bar-height: 68%"></span>
+                            </div>
+                            <span class="day-name">TUE</span>
+                        </div>
+
+                        <div class="chart-day">
+                            <span class="day-value">1</span>
+                            <div class="day-track">
+                                <span class="day-bar" style="--bar-height: 25%"></span>
+                            </div>
+                            <span class="day-name">WED</span>
+                        </div>
+
+                        <div class="chart-day">
+                            <span class="day-value">2</span>
+                            <div class="day-track">
+                                <span class="day-bar" style="--bar-height: 45%"></span>
+                            </div>
+                            <span class="day-name">THU</span>
+                        </div>
+
+                        <div class="chart-day">
+                            <span class="day-value">0</span>
+                            <div class="day-track">
+                                <span class="day-bar is-empty"></span>
+                            </div>
+                            <span class="day-name">FRI</span>
+                        </div>
+
+                        <div class="chart-day">
+                            <span class="day-value">4</span>
+                            <div class="day-track">
+                                <span class="day-bar is-today"
+                                      style="--bar-height: 90%"></span>
+                            </div>
+                            <span class="day-name">SAT</span>
+                        </div>
+
+                        <div class="chart-day">
+                            <span class="day-value">0</span>
+                            <div class="day-track">
+                                <span class="day-bar is-empty"></span>
+                            </div>
+                            <span class="day-name">SUN</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chart-legend">
+                    <span><i></i> COMPLETED PRACTICE</span>
+                    <span>ACTIVITY IS MEASURED BY SESSION</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="skills-section">
+            <div class="section-heading">
+                <div>
+                    <span class="section-index">02 / SKILL DEVELOPMENT</span>
+                    <h2>HOW YOUR SKILLS <span>GROW.</span></h2>
+                </div>
+                <p>Every skill develops at its own pace.</p>
+            </div>
+
+            <div class="skills-list">
+                <article class="skill-item">
+                    <div class="skill-icon skill-icon-vocabulary" aria-hidden="true">
+                        <img src="/frontend/assets/icons/ichika-icon.png" alt="">
+                    </div>
+
+                    <div class="skill-main">
+                        <div class="skill-title">
+                            <h3>VOCABULARY</h3>
+                            <span>WORD POWER</span>
+                        </div>
+                        <p>Words learned and remembered through practice.</p>
+                        <div class="skill-progress-track">
+                            <span class="skill-progress-fill fill-vocabulary"
+                                  style="--skill-progress: 68%"></span>
+                        </div>
+                    </div>
+
+                    <div class="skill-percentage">
+                        <strong>68%</strong>
+                        <span>DEMO</span>
+                    </div>
+                </article>
+
+                <article class="skill-item">
+                    <div class="skill-icon skill-icon-listening" aria-hidden="true">
+                        <img src="/frontend/assets/icons/miku-icon.png" alt="">
+                    </div>
+
+                    <div class="skill-main">
+                        <div class="skill-title">
+                            <h3>LISTENING</h3>
+                            <span>AUDIO SKILLS</span>
+                        </div>
+                        <p>Listening exercises completed successfully.</p>
+                        <div class="skill-progress-track">
+                            <span class="skill-progress-fill fill-listening"
+                                  style="--skill-progress: 42%"></span>
+                        </div>
+                    </div>
+
+                    <div class="skill-percentage">
+                        <strong>42%</strong>
+                        <span>DEMO</span>
+                    </div>
+                </article>
+
+                <article class="skill-item">
+                    <div class="skill-icon skill-icon-grammar" aria-hidden="true">
+                        <img src="/frontend/assets/icons/yotsuba-icon.png" alt="">
+                    </div>
+
+                    <div class="skill-main">
+                        <div class="skill-title">
+                            <h3>GRAMMAR</h3>
+                            <span>BUILD SENTENCES</span>
+                        </div>
+                        <p>Grammar exercises completed successfully.</p>
+                        <div class="skill-progress-track">
+                            <span class="skill-progress-fill fill-grammar"
+                                  style="--skill-progress: 75%"></span>
+                        </div>
+                    </div>
+
+                    <div class="skill-percentage">
+                        <strong>75%</strong>
+                        <span>DEMO</span>
+                    </div>
+                </article>
+            </div>
+
+            <p class="skills-note">
+                * Example percentages for layout preview. Actual results will
+                depend on completed exercises and their scoring.
+            </p>
+        </section>
+
+        <section class="history-section">
+            <div class="section-heading">
+                <div>
+                    <span class="section-index">03 / YOUR RECORD</span>
+                    <h2>RECENT <span>SESSIONS.</span></h2>
+                </div>
+
+                <span class="history-count">03 EXAMPLE ENTRIES</span>
+            </div>
+
+            <div class="history-table">
+                <div class="history-row history-header">
+                    <span>ACTIVITY</span>
+                    <span>DATE</span>
+                    <span>TIME</span>
+                    <span>RESULT</span>
+                </div>
+
+                <div class="history-row">
+                    <div class="history-activity">
+                        <span class="history-dot dot-vocabulary"></span>
+                        <div>
+                            <strong>Vocabulary Practice</strong>
+                            <small>WORD POWER</small>
+                        </div>
+                    </div>
+                    <span class="history-date">SAT, 10 OCT</span>
+                    <span class="history-time">18 MIN</span>
+                    <span class="history-result">85%</span>
+                </div>
+
+                <div class="history-row">
+                    <div class="history-activity">
+                        <span class="history-dot dot-listening"></span>
+                        <div>
+                            <strong>Listening Practice</strong>
+                            <small>AUDIO SKILLS</small>
+                        </div>
+                    </div>
+                    <span class="history-date">FRI, 09 OCT</span>
+                    <span class="history-time">12 MIN</span>
+                    <span class="history-result">70%</span>
+                </div>
+
+                <div class="history-row">
+                    <div class="history-activity">
+                        <span class="history-dot dot-grammar"></span>
+                        <div>
+                            <strong>Grammar Practice</strong>
+                            <small>BUILD SENTENCES</small>
+                        </div>
+                    </div>
+                    <span class="history-date">THU, 08 OCT</span>
+                    <span class="history-time">15 MIN</span>
+                    <span class="history-result">90%</span>
+                </div>
+            </div>
+
+            <div class="history-demo-note">
+                <span>!</span>
+                This is a visual preview. These sessions are not real records.
+            </div>
+        </section>
+
+        <section class="progress-footer-note">
+            <span class="footer-note-mark" aria-hidden="true">✦</span>
+            <p>Progress isn't about being perfect.<br>
+                <strong>It's about coming back tomorrow.</strong>
+            </p>
+            <a href="/frontend/pages/practice/index.html" class="primary-button">
+                <span class="button-icon">▶</span>
+                KEEP PRACTICING
+            </a>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-brand">
+            <span>NINO'S</span>
+            <strong>NO EXCUSES.</strong>
+        </div>
+        <p>Keep going. You're not completely hopeless.</p>
+        <span class="footer-version">
+            ENGLISHLAB / 2026 ·
+            <a href="mi-github">Fernando Barrezueta</a>
+        </span>
+    </footer>
+</body>
+</html>
